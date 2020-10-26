@@ -1,0 +1,27 @@
+@import '~common/style/_settings.scss';
+
+.search-div {
+  margin-top: 3rem;
+}
+
+.title-container {
+  margin-top: 40px;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #444945;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 4px solid $lighter-gray;
+  padding-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.reminder-container {
+  margin: 0 auto;
+  width: 600px;
+}

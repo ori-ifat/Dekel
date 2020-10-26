@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="67px" viewBox="0 0 65 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.437781701" y="0" width="40" height="67" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="services" transform="translate(-560.000000, -264.000000)">
+            <g id="Group-6" transform="translate(235.000000, 264.000000)">
+                <g id="Group-4">
+                    <g id="Group-3" transform="translate(337.000000, 0.000000)">
+                        <g id="Rectangle-6">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <rect stroke="#3ECB5B" stroke-width="2" x="1.4377817" y="1" width="38" height="65" rx="4"></rect>
+                        </g>
+                        <circle id="Oval" fill="#3ECB5B" cx="21" cy="57" r="4"></circle>
+                        <path d="M2.60510451,57 L38.7659913,57" id="Line" stroke="#3ECB5B" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

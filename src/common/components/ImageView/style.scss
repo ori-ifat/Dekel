@@ -1,0 +1,82 @@
+:global {
+  .image-wrapper {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 2.5vh 0 !important;
+    overflow: hidden;
+  }
+  .react-image-viewer {
+    position: fixed !important;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    background-color: #000 !important;
+    right: 0 !important;
+    z-index: 1500 !important;
+	}
+  .tool-bar {
+    opacity: 1 !important;
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  .button-group {
+    background-color: #fff !important;
+    margin: 0 !important;
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    border-radius: 2px;
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.45);
+    .button {
+      border-radius: 0 !important;
+      margin: 0 !important;
+      border: 0px solid transparent !important;
+      background: transparent !important;
+      &:hover {
+
+      }
+
+      &:before{
+        display: block;
+        background-color: #8a8a8a !important;
+        height: 14px !important;
+        width: 2px !important;
+        opacity: 1 !important;
+        top: 9px !important;
+        opacity: 1 !important;
+      }
+      &:after {
+        background-color: #8a8a8a !important;
+        height: 14px !important;
+        width: 2px !important;
+        opacity: 1 !important;
+        top: 9px !important;
+        opacity: 1 !important;
+
+      }
+    }
+  }
+
+  .close-button-img {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1600 !important;
+    padding: 5px 8px 6px 8px;
+  }
+
+
+  p.caption {
+    display: none !important;
+  }
+}

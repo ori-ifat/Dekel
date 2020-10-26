@@ -1,0 +1,95 @@
+/* note use this file to override the css of the DatePicker component. import on Calendar.js file */
+$white: #ffffff;
+$black: #000000;
+$green: #ED1D24;
+$purpleOpacity: rgba(168, 133, 191, 0.2);
+$purpleDark: #835f9b;
+$purpleDarkWithOpacity: rgba(131, 95, 155, .0);
+$purpleDarkNoOpacity: rgba(131, 95, 155, 0.3);
+$gray: #545955;
+$gray2: #989898;
+$gray3: #d7d7d7;
+$grayC: #cccccc;
+$grayDark: #292929;
+$grayLight: #ebebeb;
+$grayLighter: #f9f9f9;
+$greenLight: #b8e986;
+$greenDark: #7aa54e;
+$green: #459459;
+$em-default: 10px;
+
+:global {
+  .react-datepicker-popper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container {
+    display: block !important;
+  }
+  .react-datepicker-popper {
+    z-index: 1500 !important;
+    left: -40px !important;
+  }
+
+  .react-datepicker__header {
+    background-color: white !important;
+    & > div {
+      font-size: rem-calc(15) !important;
+      font-family: 'Heebo', sans-serif;
+      border-radius: 1px !important;
+    }
+  }
+
+  .react-datepicker__triangle {
+    border-bottom-color: white !important;
+  }
+
+  .react-datepicker__month,
+  .react-datepicker__day-names {
+    & .react-datepicker__day-name,
+    & .react-datepicker__day {
+      font-size: rem-calc(15) !important;
+      margin: 0rem !important;
+      padding: 0.25rem !important;
+      text-align: center;
+      width: 2.25rem !important;
+      &.react-datepicker__day--selected {
+        background-color: $green !important;
+      }
+      &.react-datepicker__day--outside-month {
+        color: $gray2 !important;
+      }
+    }
+  }
+
+  .react-datepicker__input-container {
+    & input {
+      outline: none;
+      border-radius: 2px !important;
+      margin-bottom: 0;
+      vertical-align: middle;
+      font-weight: 400 !important;
+      display: block;
+      color: $gray !important;
+      background: $white !important;
+      border: 1px solid #DEDEDE;
+      -webkit-box-shadow: 0 0 3px $purpleDarkWithOpacity;
+      box-shadow: 0 0 3px $purpleDarkWithOpacity;
+      -webkit-transition: border-color ease-in-out .15s,
+        box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+      font-size: rem-calc(15) !important;
+      padding: 0.2rem 0.25rem !important;
+
+      width: 100% !important;
+
+      &:focus {
+        border-color: $green;
+        -webkit-box-shadow: 0 0 5px $purpleDarkNoOpacity;
+        box-shadow: 0 0 5px $purpleDarkNoOpacity;
+      }
+    }
+  }
+}

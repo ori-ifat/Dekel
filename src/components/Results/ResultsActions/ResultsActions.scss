@@ -1,0 +1,30 @@
+//@import '~app/global.scss';
+@import '~common/style/_settings.scss';
+
+.select_all {
+	font-size: rem-calc(15);
+	color: $dark-gray;
+	margin: 1rem 0 1.5rem 0;
+	.checkbox {
+		display: flex;
+	}
+	input {
+		margin: 0 0.75rem 0 0.75rem !important;
+		height: auto !important;
+		position: relative;
+		top: 4px;
+	}
+}
+
+.sort {
+	@media screen and (min-width: 800px) {
+		padding-top: 1.5rem !important;
+	}	
+	justify-content: flex-end;
+	a {
+		color: $dark-gray;
+		font-size: rem-calc(15);
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+	}
+}

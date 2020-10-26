@@ -1,0 +1,29 @@
+.error {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 950px;
+  direction: ltr;
+  font-size: 1.5rem;
+  color: crimson;
+}
+
+.login-form {
+  width: 400px;
+  margin: 50px auto;
+  display: block;  
+  input[type='checkbox'] {
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+  input[type='text'] {
+    padding: 0.175rem;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .login-form {
+    width: 80%;
+  }
+}
+

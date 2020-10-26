@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="54px" viewBox="0 0 44 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="34" cy="44" r="8"></circle>
+    </defs>
+    <g id="contact-pop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-408.000000, -537.000000)">
+        <g id="Group-10" transform="translate(408.000000, 537.000000)">
+            <path d="M1,1 L1,44 L34,44 L34,8.41421356 L26.5857864,1 L1,1 Z" id="Rectangle-34" stroke="#3ECB5B" stroke-width="2"></path>
+            <g id="Oval">
+                <use fill="#3ECB5B" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <circle stroke="#F9F9F9" stroke-width="2" cx="34" cy="44" r="9"></circle>
+            </g>
+            <rect id="Rectangle-4" fill="#F9F9F9" x="29" y="43" width="10" height="2"></rect>
+            <rect id="Rectangle-5" fill="#F9F9F9" x="33" y="39" width="2" height="10"></rect>
+            <polygon id="Rectangle-3" fill="#3ECB5B" points="26 1 35 10 26 10"></polygon>
+        </g>
+    </g>
+</svg>

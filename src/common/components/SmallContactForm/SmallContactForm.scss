@@ -1,0 +1,44 @@
+.sf_ttl {
+	font-size: 1.9rem;
+	color: #F9F9F9;
+	line-height: 1.2;
+	text-shadow: 0 4px 6px rgba(0,0,0,0.18);
+	text-align: center;
+	font-weight: 600;
+}
+
+.sub_ttl {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.form_input_vert {
+	input {
+		padding: 1rem 0.5rem;
+		height: auto;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.send-button {
+  width: 100%;
+  background-color: #FDD710 !important;
+  background-image: none;
+  font-family: 'Heebo', sans-serif;
+  font-size: 22px !important;
+  color: #413601 !important;
+  letter-spacing: 0.02px !important;
+  border-radius: 3px !important;
+}
+
+.label-success {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  color: #19722c;
+  padding: 0.75rem;
+  background: #D3EFD9;
+  border: 1px solid #ED1D24;
+  font-size: 0.85rem;
+  text-align: center;
+}

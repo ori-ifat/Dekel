@@ -1,0 +1,30 @@
+//@import '~app/global.scss';
+@import '~common/style/_settings.scss';
+
+.action_bar {
+	position: fixed;
+	bottom: -3.5rem;
+	width: 100%;
+	transition: all 0.2s;
+	opacity: 0;
+	.align-left {
+		justify-content: flex-end;
+	}
+/*
+  & .active {
+  	bottom: 0rem !important;
+  	opacity: 1;
+  }*/
+}
+
+.active {
+  bottom: 0rem !important;
+  opacity: 1 !important;
+}
+
+.action_bar_wraper {
+	background-color: #fff;
+	padding: 0.75rem 1rem 0.25rem;
+	border-right: 4px solid $green;
+	box-shadow: -1px -1px 8px 0px rgba(0,0,0,0.25);
+}

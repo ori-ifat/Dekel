@@ -1,0 +1,49 @@
+@import '~common/style/_settings.scss';
+.branch {
+	background-color: #ffffff !important;
+	text-align: right;
+	width: 100%;
+  border: 1px solid #DEDEDE !important;
+  border-radius: 2px;
+	div {
+		background-color: #fff !important;
+	}
+}
+.links {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	align-items: center;
+	a {
+		padding: 0.5rem;
+		color: $medium_gray;
+	}
+}
+
+.add {
+	margin-top: 0.5rem;
+}
+
+.fields {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	padding-left: 0.5rem !important;
+}
+
+
+.line {
+	border-top: 1px solid $light-gray;
+	padding: 0.25rem 0;
+	input {
+		margin: 0 0 0 1rem !important;
+	}
+}
+
+.word-input {
+	input{
+		padding: 0;
+		margin: 0!important;
+	}
+
+}

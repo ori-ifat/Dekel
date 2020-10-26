@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_tender_type copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Single-tender" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-321.000000, -579.000000)">
+        <g id="Group-3-Copy" transform="translate(85.000000, 533.000000)">
+            <g id="Group-12-Copy" transform="translate(4.000000, 42.000000)">
+                <g id="Rectangle-3-Copy-6" transform="translate(232.000000, 4.058824)">
+                    <rect id="Rectangle-3" fill="#D8D8D8" x="0" y="10" width="16" height="6"></rect>
+                    <path d="M13,3 L13,9 L3,9 L3,0 L10,0 L10,3 L11,3 L13,3 Z M13,2 L11,2 L11,0 L13,2 Z" id="Combined-Shape" fill="#D8D8D8"></path>
+                    <rect id="Rectangle-6" fill="#FFFFFF" x="3" y="13" width="10" height="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

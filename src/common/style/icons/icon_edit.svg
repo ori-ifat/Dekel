@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="14px" viewBox="0 0 13 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-16" transform="translate(-31.000000, -3.000000)">
+            <g transform="translate(0.000000, -1.000000)" id="icon_edit">
+                <g transform="translate(28.000000, 0.000000)">
+                    <g id="Group-2" fill-rule="evenodd" transform="translate(9.947645, 11.731402) rotate(-35.000000) translate(-9.947645, -11.731402) translate(6.947645, 3.731402)" fill="#979797">
+                        <rect id="Rectangle-2-Copy" x="1" y="11" width="4.35103145" height="1"></rect>
+                        <path d="M4.678741,13.429437 L4.8261899,1.58328599 L1.82982045,1.68110985 L1.68259494,13.5093139 L3.36324399,14.686117 L4.678741,13.429437 Z M3.13915795,14.9001839 L3.82991502,15.6232709 L3.65626684,14.6384631 L2.9599026,14.7612509 L3.13355078,15.7460587 L3.70712721,14.9269066 L3.36324399,14.686117 L3.13915795,14.9001839 Z M1.79719037,0.681642356 L4.79355982,0.583818497 C5.34555048,0.565797403 5.8076363,0.99866526 5.82565739,1.55065592 C5.8259843,1.56066928 5.77524255,5.66451029 5.67343213,13.862179 L3.82991502,15.6232709 L3.13355078,15.7460587 L0.676094644,14.0253293 L0.829897905,1.66866383 C0.836553542,1.13394513 1.26271501,0.69909162 1.79719037,0.681642356 Z" id="Rectangle" fill-rule="nonzero"></path>
+                    </g>
+                    <path d="M4.5,17.5 L3.5,17.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M7.5,17.5 L6.5,17.5" id="Line-Copy" stroke="#979797" stroke-linecap="square"></path>
+                    <path d="M10.5,17.5 L9.5,17.5" id="Line-Copy-2" stroke="#979797" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

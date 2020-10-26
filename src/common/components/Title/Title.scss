@@ -1,0 +1,41 @@
+@import '~common/style/_settings.scss';
+
+.results_summery {
+	/*margin-top: 4rem;*/
+	margin-top: 0;
+	line-height: 1;
+	font-size: 2rem;
+	color: $black;
+	span.num {
+		font-size: 1.85rem;
+	}
+}
+
+.loading {
+	opacity: 0.15
+}
+
+.pre-title {
+	margin-top: 2.5rem;
+	color: #ED1D24;
+	margin-bottom: 0;
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.menu.align-left li {
+		justify-content: flex-start !important;
+    width: 100% ;
+	}
+	.results_summery {
+		line-height: 1.2;
+		font-size: 1.75rem;
+		margin-top: 2rem !important;
+	}
+	span.num {
+		font-size: 1.65rem !important;
+	}
+	.pre-title {
+		margin-top: 1.5rem !important;
+	}
+}

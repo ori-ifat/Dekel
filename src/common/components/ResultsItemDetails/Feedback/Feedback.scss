@@ -1,0 +1,73 @@
+@import '~app/global.scss';
+.button-like {
+  font-family: 'Heebo', sans-serif;
+}
+
+.button-dislike {
+  display: block;
+}
+
+@media screen and (max-width: 39.9375em){
+  .likeitem {
+
+    padding: 0;
+    margin-left: 0 !important;
+    .text {
+      margin-bottom: 1rem; 
+    }
+    a {
+      height: 100% !important;
+    }
+  }
+}
+
+
+.likeitem {
+  border-right: 4px solid $green;
+  border-top: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  /* Rectangle 26: */
+  background: #FFFFFF;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20);
+  border-radius: 2px;
+  a {
+    margin-bottom: 0 !important;
+    align-self: center;
+    width: 12rem;
+    margin-left: 0.5rem;
+    color: $dark-gray;
+    background: #fff;
+    border: 1px solid $light-gray;
+    border-radius: 2px;
+  }
+  .ttl {
+    margin-bottom: 0;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    font-size: rem-calc(18);
+  }
+  .sub {
+    margin-bottom: 0;
+  }
+  .buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
+.focused {
+  background-color: #33b14e !important;
+  color: #fefefe !important;
+}

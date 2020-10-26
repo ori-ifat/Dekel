@@ -1,0 +1,27 @@
+@import '~common/style/_settings.scss';
+
+.title {
+	font-family: 'Heebo', sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #444945;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	margin-top: 3rem;
+	line-height: 1.1;
+}
+
+.divider {
+	height: 0.25rem;
+	background-color: #red;
+	border-bottom: 4px solid $lighter-gray;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.section {
+	line-height: 2;
+}
+
+.cat {
+	font-weight: 500;
+}

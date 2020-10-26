@@ -1,0 +1,35 @@
+@import '~common/style/_settings.scss';
+.filter_container {
+	//padding-top: 1.5rem;
+}
+.filter_ttl {
+	position: relative;
+	.clean {
+		position: absolute;
+		left: 0;
+		font-size: 15px;
+		color: $dark-gray;
+		&:hover {
+			color: $green;
+		}
+	}
+	h4 {
+		font-weight: 600;
+		font-family: 'Heebo', sans-serif;
+		font-size: 15px;
+		margin-bottom: 2rem;
+
+	}
+}
+
+@media screen and (max-width: 39.9375em){
+	.filter_container {
+		display: none;
+		position: fixed;
+		top:80%;
+		z-index: 1000;
+		background-color: #fff;
+		overflow: scroll;
+
+	}
+}

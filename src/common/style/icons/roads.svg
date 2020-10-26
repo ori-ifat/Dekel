@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>constraction</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="2.46240759%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F73E4A" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F63945" offset="32.1056768%"></stop>
+            <stop stop-color="#ED1D24" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="2.46240759%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F73E4A" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F63945" offset="32.1056768%"></stop>
+            <stop stop-color="#ED1D24" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="constraction" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M32.2129497,16 L72.7870503,16 L95.2705668,109 L9.7294332,109 L32.2129497,16 Z M33.7870503,18 L12.2705668,107 L92.7294332,107 L71.2129497,18 L33.7870503,18 Z" id="Rectangle" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+        <path d="M57.3371522,93 L58,111 L49,111 L49.6628478,93 L57.3371522,93 Z M56.5270049,71 L57.1162029,87 L49.8837971,87 L50.4729951,71 L56.5270049,71 Z M55.7905074,51 L56.3060556,65 L50.6939444,65 L51.2094926,51 L55.7905074,51 Z M55.1276596,33 L55.5695581,45 L51.4304419,45 L51.8723404,33 L55.1276596,33 Z M54.5384615,17 L54.9067103,27 L52.0932897,27 L52.4615385,17 L54.5384615,17 Z" id="Shape" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+    </g>
+</svg>

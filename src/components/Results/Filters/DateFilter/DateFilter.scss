@@ -1,0 +1,44 @@
+@import '~common/style/_settings.scss';
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.dates-right, .dates-left, .dates-middle {
+  display: inline-block;
+  padding: 0.25rem 0;
+  margin-left: 1rem;
+  position: relative;
+  bottom: -2px;
+}
+
+.selected {
+  border-bottom: 4px solid $green;
+  font-weight: 600;
+}
+
+.start-date {
+
+}
+
+.end-date {
+  display: block;
+}
+
+.dateContainer {
+  margin-top: 2rem;
+  .tabs_container {
+    border-bottom: 1px solid $medium-gray;
+    display: flex;
+  }
+  .date_lable {
+    display: block;
+    font-size: rem-calc(14);
+    padding: 1rem 0 0.5rem 0;
+  }
+  input {
+    padding:0.5rem;
+    
+  }
+}

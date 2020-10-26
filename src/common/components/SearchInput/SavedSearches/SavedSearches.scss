@@ -1,0 +1,75 @@
+@import '~common/style/_settings.scss';
+.container {
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 1px 3px 5px 0 rgba(0,0,0,0.20);
+  line-height: 1.8;
+  padding: 0.75rem 0;
+}
+
+.title {
+  font-size: 1rem;
+  font-family: 'Heebo', sans-serif;
+  padding: 0.075rem 3.8rem;
+  margin: 0;
+  color: $dark-gray;
+  font-weight: 600;
+}
+
+.link {
+  color: gray;
+  font-size: 1rem;
+  display: block;
+  /*display: inline-block;*/
+  /*padding: 0.1rem 3.8rem;*/
+  color: $dark-gray;
+  &:hover {
+    background-color: $xlight-gray;
+  }
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 0
+}
+
+.action-links {
+  float: right;
+  width: 10%;
+  padding-right: 3.8rem;
+}
+
+.action-links-min {
+  float: right;
+  width: 10%;
+  padding-right: 1.8rem;
+}
+
+@media screen and (max-width: 39.9375em){
+  .action-links {
+    float: right;
+    width: 10%;
+    padding-right: 0;
+  }
+
+  .action-links-min {
+    float: right;
+    width: 10%;
+    padding-right: 0;
+  }
+}
+
+.search-links {
+  float: left;
+  width: 90%;
+}
+
+.image-buttons {
+  padding-left: 7px;
+  padding-right: 7px;
+  &:hover {
+    background-color: $xlight-gray;
+  }
+}

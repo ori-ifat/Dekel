@@ -1,0 +1,304 @@
+@charset 'utf-8';
+
+@import '~common/style/_settings.scss';
+//@import 'foundation'; //** move to global scope
+@import '../../node_modules/foundation-sites/assets/foundation-rtl.scss';
+@import '../../node_modules/motion-ui/motion-ui.scss';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+// @include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+// @include foundation-prototype-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body, html {
+	font-family: 'Heebo', sans-serif;
+	background-color: #f9f9f9;
+}
+
+h1,h2, h3, h4, h5, h6 {
+    font-family: 'Heebo', sans-serif;
+}
+
+/*checkbox*/
+
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
+/* shared between both checkbox and radio */
+
+.radio label, .checkbox label {
+    padding-left: 25px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin: 1.125rem 0 0 0;
+
+    position: relative;
+
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    -webkit-appearance: none;
+    /*margin-left: -25px;*/
+}
+
+.radio input[type="radio"]:after, .radio-inline input[type="radio"]:after, .checkbox input[type="checkbox"]:after, .checkbox-inline input[type="checkbox"]:after {
+    border-color: rgba(0, 0, 0, 0.54);
+}
+
+.radio input[type="radio"]:disabled:after, .radio-inline input[type="radio"]:disabled:after, .checkbox input[type="checkbox"]:disabled:after, .checkbox-inline input[type="checkbox"]:disabled:after {
+    border-color: rgba(0, 0, 0, 0.26);
+}
+
+.radio input[type="radio"]:focus, .radio-inline input[type="radio"]:focus, .checkbox input[type="checkbox"]:focus, .checkbox-inline input[type="checkbox"]:focus {
+    outline: none;
+}
+
+/* checkbox */
+
+
+.checkbox input[type="checkbox"]:after, .checkbox-inline input[type="checkbox"]:after {
+    border: 2px solid #D7D7D7;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 18px;
+    transition: 240ms;
+    width: 18px;
+    background: #fff;
+}
+
+.checkbox input[type="checkbox"]:checked:before, .checkbox-inline input[type="checkbox"]:checked:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 6px;
+    top: 1px;
+    display: table;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #ED1D24;
+    border-top: 0;
+    border-left: 0;
+    content: '';
+}
+
+.checkbox input[type="checkbox"]:checked:after, .checkbox-inline input[type="checkbox"]:checked:after {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.checkbox input[type="checkbox"]:disabled:checked:after, .checkbox-inline input[type="checkbox"]:disabled:checked:after {
+    background-color: rgba(0, 0, 0, 0.26);
+    border-color: transparent;
+}
+
+:global {
+
+    .Select {
+        background-color: #fff !important;
+        border: 2px solid $light-gray;
+        border-radius: 4px;
+        transition: all 0.25s;
+        &.is-focused {
+            border: 2px solid #E81E25;
+        }
+        .Select-control {
+            background-color: transparent !important;
+            border-radius: 0 !important;
+            /*cursor: pointer !important;*/
+            color: inherit;
+            padding: 0 rem-calc(60) 0 15px !important;
+            box-shadow: none !important;
+            .Select-value {
+                background-color: $xlight-gray !important;
+                color: inherit !important;
+                border: inherit !important;
+                border-radius: 4px !important;
+                direction: ltr;
+                padding: 4px 5px 4px 3px;
+                font-size: 15px;
+                span {
+                    border: inherit !important;
+                    line-height: 15px !important;
+                    color: $black;
+                }
+                .Select-value-icon {
+                    border: inherit !important;
+                    padding: 0 3px 4px;
+                    font-size: 20px;
+                    font-weight: 100;
+                }
+                .Select-value-label {
+                    direction: rtl;
+                    border: inherit !important;
+                    padding: 0 3px;
+                    white-space: pre; /* added for firefox */
+                }
+            }
+            .Select-input {
+				font-size: 1.25rem;
+                color: $black;
+                input {
+                    color: inherit;
+                    line-height: inherit;
+					padding: 0;
+                    outline-width: 0;
+                }
+                input:focus {
+                    outline-width: 0;
+                }
+            }
+            .Select-arrow {
+                /*background-image: url('../common/style/icons/Plus.svg');
+                background-repeat: no-repeat;
+                background-size: cover;*/
+                height: 16px;
+                width: 16px;
+                border: none;
+                margin-top: 5px;
+            }
+            .Select-placeholder {
+                color:$dark-gray;
+                right: rem-calc(60);
+                padding: 0;
+
+            }
+        }
+        .Select-menu-outer {
+            color: white !important;
+            border-radius: 0 !important;
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+            overflow: hidden;
+            margin-top: 0.5rem;
+            max-height: 380px;
+            .Select-menu {
+                .Select-option {
+                    border-radius: 0 !important;
+                    padding: 0px 60px 0px 60px !important;
+										line-height: 1 !important;
+                    &.is-focused {
+                        background-color: $xlight-gray !important;
+                        color: $black !important;
+                    }
+                    font-size: 15px !important;
+                    span.type {
+                        color: $medium_gray !important;
+                    }
+                }
+                max-height: 380px;
+            }
+
+            .Select-noresults {
+              margin-right: 25px;
+            }
+        }
+        &.search-select {
+            > .Select-control {
+                border: none !important;
+                padding: 0 rem-calc(60) 0 15px !important;
+                .Select-placeholder {
+                    color: $dark-gray;
+                }
+                .Select-value {
+                    margin-top: 2px !important;
+                }
+                .Select-arrow {
+                    display: none;
+                }
+            }
+            .Select-menu-outer {
+                margin-top: 0px;
+                /*max-height: 380px*/
+                @media (max-height: 768px) {
+                  /* a fix for low resolution users - make height of suggestions smaller */
+                  max-height: 280px !important;
+                }
+                max-height: none;
+                padding: 8px 0;
+                .Select-menu {
+                    .Select-option {
+                        padding: 0 !important;
+                        & > div {
+                            padding: 8px 60px;
+                        }
+                        .separate-line {
+                            border-bottom: 1px solid $black;
+                            margin: 8px 0;
+                            height: 0 !important;
+                            padding: 0 !important;
+                        }
+                        .type {
+                            margin: 0 10px;
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                        font-size: 15px;
+                    }
+                    /*max-height: 380px*/
+                    @media (max-height: 768px) {
+                      /* a fix for low resolution users - make height of suggestions smaller */
+                      max-height: 280px !important;
+                    }
+                    max-height: none;
+                    padding: 8px 0;
+                }
+            }
+        }
+        &.is-loading {
+            .Select-arrow-zone {
+                display: none;
+            }
+        }
+        &.is-selected-all {
+            .Select-arrow-zone {
+                display: none;
+            }
+        }
+    }
+}

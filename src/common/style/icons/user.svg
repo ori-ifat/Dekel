@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="22" height="22" rx="11"></rect>
+        <rect id="path-3" x="0" y="0" width="22" height="22" rx="11"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="user">
+            <g id="Mask" fill="#DEDEDE" fill-rule="nonzero">
+                <rect id="path-1" x="0" y="0" width="22" height="22" rx="11"></rect>
+            </g>
+            <g id="Oval-Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <ellipse id="Oval" fill="#ED1D24" fill-rule="nonzero" mask="url(#mask-2)" cx="11" cy="20.1122913" rx="8" ry="9.11229133"></ellipse>
+            </g>
+            <g id="Oval-Copy-Clipped">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="path-1"></g>
+                <circle id="Oval-Copy" stroke="#DEDEDE" fill="#ED1D24" fill-rule="nonzero" mask="url(#mask-4)" cx="11" cy="8" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,99 @@
+@import '~common/style/_settings.scss';
+
+.main_ttl {
+	font-family: 'Heebo', sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #444945;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	margin-top: 3rem;
+	line-height: 1.1;
+}
+
+.divider {
+	border-bottom: 4px solid $lighter-gray;
+	margin-top: 0;
+}
+
+.pricing {
+  margin-top: 2rem;
+}
+
+.top_info {
+	margin: 0 1rem;
+	border-bottom: 1px solid #979797;
+	padding: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.plan {
+		margin-bottom: 2rem !important;
+	}
+}
+
+
+.plan {
+	border: 1px solid #979797;
+	margin-left: -1px;
+	margin-bottom: 6rem;
+	background-color: #fff;
+  & P {
+  	margin-bottom: 0;
+  }
+
+  & H2 {
+  	background: #444;
+  	font-size: 1.5rem;
+  	color: #FFFFFF;
+  	letter-spacing: -0.15px;
+  	line-height: 1;
+  	text-align: center;
+  	padding: 0.75rem 0;
+  	margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+
+.hilight {
+  margin: -0.5rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 14px 0 rgba(0,0,0,0.36);
+  & H2 {
+    background-color: #37CD55;
+  }
+}
+
+.price {
+	font-family: 'Heebo', sans-serif;
+	text-align: center;
+
+	margin-bottom: 0.5rem;
+	font-size: 1.4rem;
+}
+
+.p_big {
+	font-size: 2.75rem;
+	color: #444945;
+	letter-spacing: -0.26px;
+	line-height: 1;
+}
+
+.show_full {
+	text-align: center;
+	display: block;
+}
+
+.bottom_info {
+	margin: 2rem 0 2rem 0;
+  P {
+    text-align: center;
+	  margin-bottom: 0.5rem;
+  }
+}
+
+.signup_btn {
+	width: 80%;
+	margin-bottom: 2rem !important;
+	font-size: rem-calc(16);
+	font-weight: 500;
+}

@@ -1,0 +1,121 @@
+//@import '~common/style/_settings.scss';
+.button-call {
+  position: fixed;
+  display: block;
+  bottom: 1rem;
+  right: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  /* Rectangle 15: */
+  background: #ED1D24;
+  border: 1px solid #ED1D24;
+  box-shadow: 0 6px 14px -4px rgba(0,0,0,0.50);
+  display: flex;
+  justify-content: center;
+}
+
+.button-call-desktop {
+  position: fixed;
+  display: block;
+  bottom: 2.4rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button-cancel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  /*padding: 1.5rem 2rem;*/
+  padding:0 0 1.5rem 0;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.input-label {
+  color: #ed1d24;
+}
+
+.combo {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.btn_container {
+  padding-top: 0.5rem;
+  text-align: left;
+}
+
+.button-submit {
+  background-color: #fcdc34;
+  color: #666666;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.message {
+  margin-bottom: 0.5rem;
+}
+
+.input-value {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.pl {
+  display: block;
+}
+
+.errors {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e02113;
+  padding-bottom: 0.5rem;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 0 !important;
+}
+
+.image-button {
+  width: 183px;
+  height: 184px;
+}
+
+@media screen and (max-width: 1400px) {
+  .image-button {
+    width: 143px;
+    height: 144px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .image-button {
+    width: 133px;
+    height: 134px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .image-button {
+    width: 123px;
+    height: 124px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image-button {
+    width: 103px;
+    height: 104px;
+  }
+}

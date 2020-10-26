@@ -1,0 +1,84 @@
+
+.buttons_cont {
+  text-align: left;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+.remider_ttl {
+  font-weight: 500;
+}
+
+.button-cancel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+}
+.button-remove {
+  font-size: rem-calc(15);
+  padding: 0 1.5rem;
+}
+
+.button-submit {
+  background-color: #ED1D24;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.date-container {
+  width: 100%;
+  & > div {
+    width: 100%;
+    display: block;
+  }
+}
+
+.remark {
+  height:5.5rem;
+}
+
+.pb {
+  padding-bottom: 0.75rem;
+  span {
+    font-size: rem-calc(15);
+    color: #8a8a8a;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+}
+
+.note {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.reminder_lb {
+  padding: 1.5rem  2.5rem !important;
+  overflow: initial !important;
+  max-width: 32rem !important;
+}
+
+.time-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.4375rem;
+  margin: 0 0 1rem;
+  padding: .5rem;
+  border: 1px solid #cacaca;
+  border-radius: 2px;
+  background-color: #fefefe;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #545955;
+  transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+}

@@ -1,0 +1,78 @@
+.reveal-overlay-custom {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1005;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: scroll !important;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+@media print, screen and (min-width: 40em){
+  .reveal-custom {
+    width: 510px;
+    max-width: 75rem;
+    right: auto;
+    left: auto;
+    margin: 0 auto;
+  }
+
+  .reveal-custom.large {
+    width: 90% !important;
+    max-width: 75rem !important;
+    padding: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .reveal-custom {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: none;
+    height: 100vh;
+    min-height: 100vh;
+    margin-left: 0 !important;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.reveal-custom {
+  z-index: 1006;
+  backface-visibility: hidden;
+  display: block;
+  /*padding: 1rem;*/
+  border: 1px solid #cacaca;
+  border-radius: 0;
+  background-color: #fefefe;
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+  overflow-y: auto;
+
+}
+
+.reveal-custom-login {
+  overflow-x: hidden;
+  width: 740px;
+}
+
+.reveal-custom-welcome {
+  /*width: 553px !important;
+  height: 553px !important;
+  text-align: center;*//* -> welcome image */
+  /*
+  width: 653px !important;
+  height: 753px !important;
+  padding: 10px;*//* -> welcome text message */
+
+  width: 552px !important;
+  height: 402px !important;
+  text-align: center; /* -> welcome message image */
+}

@@ -1,0 +1,21 @@
+//@import '~app/global.scss';
+@import '~common/style/_settings.scss';
+
+.no-data {
+  margin-top: 4rem;
+	font-size: 2rem;
+	color: #ddd;
+	span {
+		font-size: 1.75rem;
+	}
+  width: 300px;
+  margin: 20px auto 0 auto;
+}
+
+.error {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  color: $black;
+  width: 600px;
+  margin: 20px auto 0 auto;
+}

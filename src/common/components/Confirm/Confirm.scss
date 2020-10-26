@@ -1,0 +1,33 @@
+/*.container {
+  top: 200px;
+  height: 150px;
+}*/
+
+.container {
+  padding: 1.5rem 2rem;
+}
+
+@media screen and (max-width: 39.9375em){
+  .container {
+    padding: 240px 2rem 1.5rem 2rem;
+  }
+}
+
+.message {
+  margin-bottom: 0.5rem;
+}
+
+.sub {
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 10px;
+  min-width: 80px;
+  margin: 5px;
+}

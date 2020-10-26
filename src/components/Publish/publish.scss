@@ -1,0 +1,102 @@
+@import '~common/style/_settings.scss';
+
+.title-container {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.wraper {
+    .pl {
+      padding-left: 0rem !important;
+    }
+    .pr {
+      padding-right: 0rem !important;
+    }
+	}
+}
+
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #444945;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 4px solid $lighter-gray;
+  padding-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.btn_container {
+  text-align: left;
+}
+
+.button-submit {
+
+  background-color: #ED1D24;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.errors {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e02113;
+  padding-bottom: 0.5rem;
+  line-height: 1.2;
+  display: block;
+}
+
+.sent {
+  font-size: 1rem;
+  height: 178px;
+  margin: 100px auto 20px auto;
+  width: 250px;
+  text-align: center;
+}
+
+.wraper {
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+    border-radius: 4px;
+    padding: 2rem 3rem 2.5rem 3rem;
+    margin-bottom: 3rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-bottom: 2px solid $light-gray;
+      margin-bottom: 2rem;
+
+    }
+    .input-value {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .pl {
+      padding-left: 1.5rem;
+    }
+    .pr {
+      padding-right: 1.5rem;
+    }
+
+    .tender {
+      margin-bottom: 2rem;
+    }
+}
+.promoWraper {
+  margin-bottom: 0.5rem;
+  h4 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  padding: 1rem;
+  p.promo {
+    display: block;
+  }
+}

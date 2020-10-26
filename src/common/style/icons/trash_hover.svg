@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>trash_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Single-tender" transform="translate(-133.000000, -664.000000)" fill="#49C765">
+            <path d="M136,665 L136,664 L140,664 L140,665 L143,665 L143,667 L133,667 L133,665 L136,665 Z M134,668 L142,668 L142,677 L134,677 L134,668 Z" id="trash_hover"></path>
+        </g>
+    </g>
+</svg>

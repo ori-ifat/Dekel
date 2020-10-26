@@ -1,0 +1,52 @@
+//@import '~common/style/_settings.scss';
+
+.title {
+	font-family: 'Heebo', sans-serif;
+	font-size: rem-calc(40);
+	font-weight: 700;
+	color: #ED1D24;
+	/*text-shadow: 0 2px 3px rgba(0,0,0,0.2);*/
+	margin-top: 4rem;
+  line-height: 1;
+	letter-spacing: -0.03rem;
+}
+
+.subtitle {
+	font-family: 'Heebo', sans-serif;
+	font-size: rem-calc(40);
+	font-weight: 500;
+	color: #545955;
+	/*text-shadow: 0 2px 3px rgba(0,0,0,0.2);*/
+	margin-top: 0;
+	margin-bottom: 2rem;
+  line-height: 1;
+	letter-spacing: -0.03rem;
+}
+
+
+
+
+.costomer_types {
+	img {
+		width: 1.125rem;
+		margin-left: 0.5rem;
+	}
+}
+
+.content {
+	.item {
+		display: flex;
+		flex-direction: row;
+		margin: 2rem 0 0 0;
+		img {
+			margin: 0 1rem 0 2rem;
+
+		}
+		p {
+			font-size: 1.125rem;
+			margin: 0;
+			max-width: 46rem;
+			letter-spacing: -0.01rem;
+		}
+	}
+}

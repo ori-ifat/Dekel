@@ -1,0 +1,18 @@
+//@import '~app/global.scss';
+@import '~common/style/_settings.scss';
+
+.results_summery {
+	/*margin-top: 4rem;*/
+	margin-top: 0;
+	font-size: 2.5rem;
+	color: $black;
+	span {
+		font-size: 2.15rem;
+	}
+}
+
+.user-greet {
+	margin-bottom: 0;
+	margin-top: 4rem;
+	color: #ed1d24;
+}

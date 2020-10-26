@@ -1,0 +1,54 @@
+@import '~common/style/_settings.scss';
+
+.record {
+    position: relative;
+    margin-top: 1.5rem;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+    padding: 1rem;
+    span {
+      font-family: 'Heebo', sans-serif;
+      color: $dark-gray;
+      font-size: 0.9rem;
+      padding-left: 0.75rem;
+      border-left: 1px solid $light-gray;
+      line-height: 0.9rem;
+    }
+    a {
+      font-size: 0.9rem;
+      margin-right: 0.75rem;
+      color: $dark-gray;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.selected {
+  border: green 1px solid !important;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 0
+}
+
+.record-infodate {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.time {
+  border-left: 0px solid transparent !important;
+}
+
+.record-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  cursor: pointer;
+}

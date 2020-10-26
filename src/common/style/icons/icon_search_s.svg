@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_search_s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Select" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-411.000000, -106.000000)">
+        <g id="icon_search-copy" transform="translate(412.000000, 107.000000)" stroke="#BABABA">
+            <path d="M5.04,2.24 C3.4936027,2.24 2.24,3.4936027 2.24,5.04" id="Oval" stroke-width="1"></path>
+            <circle id="Oval-6" stroke-width="2" cx="5.04" cy="5.04" r="5.04"></circle>
+            <path d="M10.08,10.08 L13.72,13.72" id="Line-3" stroke-width="2" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

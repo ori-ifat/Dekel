@@ -1,0 +1,100 @@
+//@import '~app/global.scss';
+/* NOTE need to import '~app/global.scss' only on top-level, on app/index!!
+if only settings are needed, import '~common/style/_settings.scss' instead. this will drasticlly improve css size */
+//@import '~common/style/_settings.scss'
+// Header
+
+@import '~common/style/_settings.scss';
+
+.header {
+	
+}
+
+.head_continer {
+	display: flex;
+	position: relative;
+	padding: 1.5rem 0;
+}
+
+.manu_icon {
+	position: absolute;
+	left: 0.75rem;
+
+	display: none;
+}
+
+
+// small and down
+@media screen and (max-width: 56.25rem) {
+	.menu {
+		flex-direction: column;
+		margin-top: 1rem;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+		li {
+			margin: 0 !important;
+			background-color: #fff;
+			a {
+				display: block;
+			}
+		}		
+	}
+
+	.manu_icon {
+		display: block;
+	}
+
+	.menu > li > a {
+		padding: 1.125rem 1rem !important;
+		border-top: 1px solid #ddd !important;;
+	}
+
+	.logo {
+		span {
+		border-right: 0px solid #ddd !important;
+		padding: 0 !important;
+		margin-right: 0 !important;
+		color: #444;
+		display: block;
+		}
+	
+	}
+}
+
+.logo {
+	span {
+	border-right: 1px solid #ddd;
+    padding: 0 0.75rem;
+	margin-right: 0.75rem;
+	color: #444;
+	}
+
+}
+
+
+
+
+.menu {
+	margin-right: auto;
+	display: flex;
+	list-style: none;
+	margin-bottom: 0;
+	&.hide {
+		display: none;
+	}
+}
+
+
+.menu > li > a {
+	color: #444;
+	padding: 0.5rem 1rem 0.6rem 1rem;
+}
+
+.menu > li > a > img {
+	margin: 0 0 0 0.5rem;
+}
+
+.menu > li > a:hover {
+	color: #ED1D24;
+}
+
+

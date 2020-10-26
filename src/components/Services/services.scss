@@ -1,0 +1,40 @@
+@import '~common/style/_settings.scss';
+
+.title {
+	font-family: 'Heebo', sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #444945;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+  border-bottom: 4px solid $lighter-gray;
+  padding-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.service_container {
+	max-width: 25rem;
+	margin-top: 3rem;
+}
+
+.service-title {
+	font-weight: 700;
+	font-size: 2rem;
+	color: #444444;
+	letter-spacing: -0.2px;
+	line-height: 1;
+}
+
+.services_text {
+	padding-top: 1rem;
+	a {
+		margin-top: 1rem;
+		display: inline-block;
+		margin-left: 0.5rem;
+	}
+}
+
+.middle {
+  margin-top: 1.2rem;
+}

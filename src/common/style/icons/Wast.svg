@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Wast</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wast" stroke="#56B96C" stroke-width="2">
+            <path d="M74.8715319,49.4030407 L71.4592388,104.717439 C71.3559811,106.39128 69.8950942,107.762207 68.2092138,107.762207 L28.7907862,107.762207 C27.1084128,107.762207 25.6438398,106.388376 25.5406759,104.716056 L22.1061245,49.040842 L74.8715319,49.4030407 Z" id="Rectangle-2"></path>
+            <path d="M78.2135106,45.1188965 L18.7864894,45.1188965 L18.7864894,40.0389495 C18.7864894,37.2691971 21.0210057,35.0298366 23.7882142,35.0298366 L73.2117858,35.0298366 C75.9766384,35.0298366 78.2135106,37.2675528 78.2135106,40.0389495 L78.2135106,45.1188965 Z" id="Rectangle"></path>
+            <path d="M41.5961261,31.0537498 L41.5961261,29.6305073 C41.5961261,27.7472028 43.041999,26.237793 44.8042563,26.237793 L51.1418938,26.237793 C52.89934,26.237793 54.3500241,27.7536388 54.3500241,29.6259843 L54.3500241,31.073542 L41.5961261,31.0537498 Z" id="Rectangle-5"></path>
+            <path d="M43,60.4021671 L43,86.9573827" id="Line-Copy" stroke-linecap="square"></path>
+            <path d="M63,60.4021671 L62,86.9573827" id="Line-Copy-2" stroke-linecap="square"></path>
+            <path d="M33,60.4021671 L34,86.9573827" id="Line-Copy-3" stroke-linecap="square"></path>
+            <path d="M53,60.4021671 L53,86.9573827" id="Line-Copy-4" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
