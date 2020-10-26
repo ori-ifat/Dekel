@@ -7,7 +7,7 @@
     "bs": "cross-env NODE_ENV=production API_BASEURL=http://iis-test:8085/Data ASSET_PATH=/ webpack --display-error-details",
     "start": "webpack-dashboard --progress -- npm run dev",
     "debug": "cross-env NODE_ENV=development API_BASEURL=http://iis-test:8081/Data webpack-dev-server",
-    "dev": "cross-env NODE_ENV=development API_BASEURL=http://192.118.61.100/DekelSiteApi webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development API_BASEURL=http://192.118.61.100:8085/Data webpack-dev-server",
     "rebuild": "cross-env NODE_ENV=production API_BASEURL=/Data ASSET_PATH=/ webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
