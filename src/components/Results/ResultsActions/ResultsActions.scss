@@ -28,3 +28,14 @@
 		padding-bottom: 0.3rem;
 	}
 }
+
+.view-by {
+	@media screen and (max-width: 39.9375em) {
+		display: none;
+	}
+	@media screen and (min-width: 800px) {
+		display: flex;
+		flex-direction: row;
+		padding-top: 2.2rem;
+	}
+}

@@ -20,6 +20,7 @@ import {fixTopMenu} from 'common/utils/topMenu'
 //import CSSModules from 'react-css-modules'
 import  './results.scss'
 
+export default
 @translate()
 @withRouter
 @whenRouted(({ params: { sort, tags, filters } }) => {
@@ -40,9 +41,7 @@ import  './results.scss'
 @inject('searchStore')
 @inject('accountStore')
 @inject('recordStore')
-
-@observer
-export default class Results extends Component {
+@observer class Results extends Component {
 
   static propTypes = {
     onCheck: func,
@@ -50,7 +49,7 @@ export default class Results extends Component {
   }
 
   @observable isHomeResults = false
-  @observable isTable = true //false
+  @observable isTable = false
 
   componentWillMount() {
     const { match: {params: { isHome }} } = this.props
@@ -126,8 +125,8 @@ export default class Results extends Component {
                 {resultsCount == 0 && !resultsLoading && <NoData error={searchStore.searchError} />}
                 {resultsCount > 0 &&
                   <div styleName={divStyle}>
-                    <ResultsActions />
-                    <a onClick={this.changeView}>change view</a>
+                    <ResultsActions changeView={this.changeView} isTable={this.isTable} />
+                    {/*<a onClick={this.changeView}>change view</a>*/}
                     <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
                     {this.isTable && <div className="grid-x grid-padding-x" style={{backgroundColor: '#fff', borderBottom: 'solid 2px #cacaca'}}>    
                         <div className="cell large-1"></div>

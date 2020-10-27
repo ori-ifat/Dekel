@@ -5,6 +5,13 @@ import { translate } from 'react-polyglot'
 import  './ResultsActions.scss'
 import FoundationHelper from 'lib/FoundationHelper'
 
+const req = require.context('common/style/icons/', false)
+const idleSrc = req('./card_idle.svg').default
+const selectedSrc = req('./card_selected.svg').default
+const tblIdleSrc = req('./table_idle.svg').default
+const tblSelectedSrc = req('./table_selected.svg').default
+//import {card_idle} from 'common/style/icons/card_idle.svg'
+
 export default
 @translate()
 @inject('searchStore')
@@ -16,7 +23,7 @@ class ResultsActions extends React.Component {
     sort: 'InputDate'
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { searchStore } = this.props
     this.setState({ sort: searchStore.sort })
     setTimeout(() => {
@@ -33,7 +40,7 @@ class ResultsActions extends React.Component {
   }
 
   render() {
-    const { t } = this.props
+    const { changeView, isTable, t } = this.props
     const { sort } = this.state
     const sortBy = sort && sort == 'InputDate' ? t('results.inputDate') : t('results.presentationDate')
 
@@ -45,6 +52,10 @@ class ResultsActions extends React.Component {
               <input type="checkbox" />
               <label>{t('results.selectAll')}</label>
             </div>*/}
+            <div styleName="view-by">
+              <a onClick={changeView}><img src={isTable ? idleSrc : selectedSrc} /></a>
+              <a onClick={changeView} style={{paddingRight: '4px'}}><img src={isTable ? tblSelectedSrc : tblIdleSrc} /></a>
+            </div>
           </div>
           <div className="medium-6 cell">
             <ul className="dropdown menu align-left sort" styleName="sort" id="sort" data-dropdown-menu data-disable-hover="true" data-click-open="true">
