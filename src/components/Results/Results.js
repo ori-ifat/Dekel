@@ -128,16 +128,16 @@ export default
                     <ResultsActions changeView={this.changeView} isTable={this.isTable} />
                     {/*<a onClick={this.changeView}>change view</a>*/}
                     <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
-                    {this.isTable && <div styleName="table_h">    
+                      {this.isTable && <div styleName="table_h">    
                         <div styleName="checkbox"></div>
                         <div styleName="cell_item title"><span styleName="cell-item">{t('results.title')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.publisher')}</span></div>
+                        <div styleName="cell_item publisher"><span styleName="cell-item">{t('results.publisher')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.number')}</span></div>    
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.classes')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.detailsLevel')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.tour')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.presentation')}</span></div>        
-                    </div>}
+                      </div>}
                       <List
                         store={searchStore}
                         loadMore={searchStore.loadNextResults}

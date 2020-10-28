@@ -457,12 +457,19 @@ const ResultsItemRow = ({
 }) => { 
   return <div styleName="table_row">    
     <div styleName="checkbox">{onCheck && <Checkbox checked={checked} item={cbItem} onChange={onCheck} style={{backgroundColor: '#fff', height: '100%'}} />}</div>
-    <div styleName="cell_item title"><div styleName="cell-item" dangerouslySetInnerHTML={markUpText(item.title)}></div></div>
-    <div styleName="cell_item info"><div styleName="cell-item">{item.publisher}</div></div>
+    <div styleName="cell_item title">
+      <div 
+        styleName="cell-item" 
+        dangerouslySetInnerHTML={markUpText(item.title)} 
+        onClick={() => viewDetails(item.tenderID)}
+        style={{cursor: 'pointer'}}
+      ></div>
+    </div>
+    <div styleName="cell_item publisher"><div styleName="cell-item">{item.publisher}</div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{item.tenderNumber}</div></div>    
     <div styleName="cell_item info"><div styleName="cell-item">{item.classes}</div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{item.detailLevelName}</div></div>
-    <div styleName="cell_item info"><div styleName="cell-item">{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{tourDate} <span style={{color: '#ed1d24'}}>{item.mustDoTour ? t('results.mustDoTour') : ''}</span></div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{presentationDate}</div></div>        
 </div>
 }
