@@ -470,6 +470,29 @@ const ResultsItemRow = ({
     <div styleName="cell_item info"><div styleName="cell-item">{item.classes}</div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{item.detailLevelName}</div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{tourDate} <span style={{color: '#ed1d24'}}>{item.mustDoTour ? t('results.mustDoTour') : ''}</span></div></div>
-    <div styleName="cell_item info"><div styleName="cell-item">{presentationDate}</div></div>        
+    <div styleName="cell_item info"><div styleName="cell-item">{presentationDate}</div></div>
+    <div styleName="cell_item info-small">
+      <ul className="no-bullet">
+        <li>
+          <a onClick={() => remind(true)}>
+            <img 
+              src={item.reminderDate && newReminderDate == '' || hasReminder ? timeActSrc : timeSrc} 
+              alt="" 
+              data-tip={reminderToolTip} 
+            />                   
+          </a>
+        </li>
+        {onFav &&
+        <li>
+          <a onClick={addFav}>
+            <img 
+              src={isFavorite ? favActSrc : favSrc} 
+              alt="" 
+              data-tip={isFavorite ? t('tender.removeFromFav') : t('tender.addToFav')} 
+            />
+          </a>
+        </li>}
+      </ul>
+    </div>    
 </div>
 }

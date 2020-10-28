@@ -136,7 +136,8 @@ export default
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.classes')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.detailsLevel')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.tour')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.presentation')}</span></div>        
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.presentation')}</span></div>
+                        <div styleName="cell_item info-small"></div>
                       </div>}
                       <List
                         store={searchStore}
