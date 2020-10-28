@@ -3,7 +3,7 @@ import { inject, observer } from 'mobx-react'
 import { observable } from 'mobx'
 import { translate } from 'react-polyglot'
 import filter from 'lodash/filter'
-import ExtraCount from 'components/results/ExtraCount'
+import ExtraCount from 'components/Results/ExtraCount'
 //import CSSModules from 'react-css-modules'
 import  './Title.scss'
 
