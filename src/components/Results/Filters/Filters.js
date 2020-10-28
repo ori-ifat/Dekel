@@ -122,6 +122,7 @@ class Filters extends React.Component {
           <a styleName="clean" onClick={this.cleanFilters}>{t('filter.clean')}</a>
           <h4>{t('filter.title')}:</h4>
         </div>
+        <hr />
         {filtersLoading && <Loading />}
         {!filtersLoading &&
 

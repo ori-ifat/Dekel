@@ -1,6 +1,9 @@
 @import '~common/style/_settings.scss';
 .filter_container {
 	//padding-top: 1.5rem;
+	hr {
+		border-bottom-color: #ed1d24;
+	}
 }
 .filter_ttl {
 	position: relative;
@@ -17,9 +20,9 @@
 		font-weight: 600;
 		font-family: 'Heebo', sans-serif;
 		font-size: 15px;
-		margin-bottom: 2rem;
+		//margin-bottom: 2rem;
 
-	}
+	}	
 }
 
 @media screen and (max-width: 39.9375em){
