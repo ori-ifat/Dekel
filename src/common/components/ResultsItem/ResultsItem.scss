@@ -243,6 +243,14 @@
 		width: 10%;
 	}
 	.info-small {
-		width: 5%;
+		width: 8%;
+		ul {
+			display: flex;
+			flex-dlow: row;
+			margin-top: 16px;
+			li {
+				margin-left:8px;
+			}
+		}
 	}
 }
