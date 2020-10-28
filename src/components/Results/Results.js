@@ -130,7 +130,7 @@ export default
                     <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
                       {this.isTable && <div styleName="table_h">    
                         <div styleName="checkbox"></div>
-                        <div styleName="cell_item title"><span styleName="cell-item">{t('results.title')}</span></div>
+                        <div styleName="cell_item title"><span styleName="cell-item">{t('results.tableTitle')}</span></div>
                         <div styleName="cell_item publisher"><span styleName="cell-item">{t('results.publisher')}</span></div>
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.number')}</span></div>    
                         <div styleName="cell_item info"><span styleName="cell-item">{t('results.classes')}</span></div>
