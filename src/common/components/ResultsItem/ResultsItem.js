@@ -455,14 +455,14 @@ const ResultsItemRow = ({
   newReminderDate,
   t
 }) => { 
-  return <div className="grid-x grid-padding-x" style={{backgroundColor: '#fff', borderBottom: 'solid 1px #cacaca', paddingBottom: '10px'}}>    
-    <div className="cell large-1">{onCheck && <Checkbox checked={checked} item={cbItem} onChange={onCheck} style={{backgroundColor: '#fff', height: '112%'}} />}</div>
-    <div className="cell large-3"><div styleName="cell-item" dangerouslySetInnerHTML={markUpText(item.title)}></div></div>
-    <div className="cell large-1"><div styleName="cell-item">{item.publisher}</div></div>
-    <div className="cell large-1"><div styleName="cell-item">{item.tenderNumber}</div></div>    
-    <div className="cell large-2"><div styleName="cell-item">{item.classes}</div></div>
-    <div className="cell large-2"><div styleName="cell-item">{item.detailLevelName}</div></div>
-    <div className="cell large-1"><div styleName="cell-item">{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</div></div>
-    <div className="cell large-1"><div styleName="cell-item">{presentationDate}</div></div>        
+  return <div styleName="table_row">    
+    <div styleName="checkbox">{onCheck && <Checkbox checked={checked} item={cbItem} onChange={onCheck} style={{backgroundColor: '#fff', height: '100%'}} />}</div>
+    <div styleName="cell_item title"><div styleName="cell-item" dangerouslySetInnerHTML={markUpText(item.title)}></div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{item.publisher}</div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{item.tenderNumber}</div></div>    
+    <div styleName="cell_item info"><div styleName="cell-item">{item.classes}</div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{item.detailLevelName}</div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</div></div>
+    <div styleName="cell_item info"><div styleName="cell-item">{presentationDate}</div></div>        
 </div>
 }

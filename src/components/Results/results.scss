@@ -10,5 +10,29 @@
 }
 
 .cell-item {
-	padding-top: 15px;
+	font-weight: 600;
 }
+
+.table_h {
+	border-bottom: 2px solid #dedede;
+	display: flex;
+	flex-flow: row;
+	.cell_item {
+		padding: 6px 8px 8px 0;
+	}
+	.checkbox {
+		width: 44px;
+	}
+	.title {
+		width: 40%;
+	}
+	.info {
+		width: 10%;
+	}
+}
+
+.table {
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,.2);
+}
+
+

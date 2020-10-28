@@ -128,15 +128,15 @@ export default
                     <ResultsActions changeView={this.changeView} isTable={this.isTable} />
                     {/*<a onClick={this.changeView}>change view</a>*/}
                     <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
-                    {this.isTable && <div className="grid-x grid-padding-x" style={{backgroundColor: '#fff', borderBottom: 'solid 2px #cacaca'}}>    
-                        <div className="cell large-1"></div>
-                        <div className="cell large-3"><div styleName="cell-item">{t('results.title')}</div></div>
-                        <div className="cell large-1"><div styleName="cell-item">{t('results.publisher')}</div></div>
-                        <div className="cell large-1"><div styleName="cell-item">{t('results.number')}</div></div>    
-                        <div className="cell large-2"><div styleName="cell-item">{t('results.classes')}</div></div>
-                        <div className="cell large-2"><div styleName="cell-item">{t('results.detailsLevel')}</div></div>
-                        <div className="cell large-1"><div styleName="cell-item">{t('results.tour')}</div></div>
-                        <div className="cell large-1"><div styleName="cell-item">{t('results.presentation')}</div></div>        
+                    {this.isTable && <div styleName="table_h">    
+                        <div styleName="checkbox"></div>
+                        <div styleName="cell_item title"><span styleName="cell-item">{t('results.title')}</span></div>
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.publisher')}</span></div>
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.number')}</span></div>    
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.classes')}</span></div>
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.detailsLevel')}</span></div>
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.tour')}</span></div>
+                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.presentation')}</span></div>        
                     </div>}
                       <List
                         store={searchStore}

@@ -222,3 +222,21 @@
 .cell-item {
 	padding-top: 15px;
 }
+
+.table_row {
+	border-bottom: 1px solid #dedede;
+	display: flex;
+	flex-flow: row;
+	.cell_item {
+		padding: 0 8px 8px 0;
+	}
+	.checkbox {
+		width: 44px;
+	}
+	.title {
+		width: 40%;
+	}
+	.info {
+		width: 10%;
+	}
+}

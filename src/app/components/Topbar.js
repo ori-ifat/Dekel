@@ -79,7 +79,7 @@ class Topbar extends Component {
   componentWillMount() {    
     //fix top nav foundation creation bug
     fixTopMenu()
-    //handle cookie for 'Welcome' component...
+    //handle cookie for 'Welcome' component... 
     this.isMobile = mobile()
     if (!this.isMobile) {
       welcomeMessage().then(res => {

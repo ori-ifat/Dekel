@@ -53,8 +53,8 @@ class ResultsActions extends React.Component {
               <label>{t('results.selectAll')}</label>
             </div>*/}
             <div styleName="view-by">
-              <a onClick={changeView}><img src={isTable ? idleSrc : selectedSrc} /></a>
-              <a onClick={changeView} style={{paddingRight: '4px'}}><img src={isTable ? tblSelectedSrc : tblIdleSrc} /></a>
+              <a styleName="selected" onClick={changeView}><img src={isTable ? idleSrc : selectedSrc} /></a>
+              <a onClick={changeView}><img src={isTable ? tblSelectedSrc : tblIdleSrc} /></a>
             </div>
           </div>
           <div className="medium-6 cell">
