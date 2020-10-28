@@ -356,24 +356,30 @@ const ResultsItemBlock = ({
       <Link to={`/tender/${item.encID}`} target='_blank' styleName="new_tab"><img src={newTabSrc} /></Link>
    
       { logged &&
+      <div styleName="tender_meta">
+        <span>{t('tender.results')}: אור שי סיטונאות חשמל, חשמל ישיר חולון בע"מ</span>
+      </div>
+      }
+
+      { logged &&
       <div styleName="tender_desc">
         <p dangerouslySetInnerHTML={markUpText(item.details)}></p>
       </div>
       }
       <div styleName="tender_meta">        
-        <span>{t('tender.tenderNumber')}:</span>
+        <span>{t('tender.tenderNumber')}: </span>
         <span >{item.tenderNumber}</span>
         <span styleName="divider">|</span>
         { logged &&
         <React.Fragment>
           {inputDate &&
             <React.Fragment>
-              <span>{t('tender.publishedAt')}:</span>
+              <span>{t('tender.publishedAt')}: </span>
               <span >{inputDate}</span>
               <span styleName="divider">|</span>                
             </React.Fragment>
           }                  
-          <span>{t('tender.publisherLabel')}:</span>
+          <span>{t('tender.publisherLabel')}: </span>
           <span >{item.publisher}</span>          
         </React.Fragment>
         }
@@ -413,7 +419,7 @@ const ResultsItemBlock = ({
         </span>}
         {tourDate && 
         <span>{t('results.tourDetails')}:&nbsp;
-          <span>{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</span>
+          <span>{tourDate} <span style={{color: '#ed1d24'}}>{item.mustDoTour ? t('results.mustDoTour') : ''}</span></span>
         </span>}               
       </div>
     </div>

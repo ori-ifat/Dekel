@@ -84,7 +84,7 @@ class Search {
 
   @action.bound
   applySort(sort) {
-    if (['PresentationDate', 'InputDate'].includes(sort)) {
+    if (['PresentationDate', 'InputDate', 'TourDate', 'TenderDate', 'TenderNum'].includes(sort)) {
       this.sort = sort
     } else {
       //implement error handle

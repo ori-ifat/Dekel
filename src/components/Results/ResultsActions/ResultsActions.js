@@ -12,6 +12,14 @@ const tblIdleSrc = req('./table_idle.svg').default
 const tblSelectedSrc = req('./table_selected.svg').default
 //import {card_idle} from 'common/style/icons/card_idle.svg'
 
+const sortData = [
+  { title: 'inputDate', sort: 'InputDate'},
+  { title: 'presentationDate', sort: 'PresentationDate'},
+  { title: 'tourDate', sort: 'TourDate'},
+  { title: 'tenderDate', sort: 'TenderDate'},
+  { title: 'tenderNum', sort: 'TenderNum'}
+]
+
 export default
 @translate()
 @inject('searchStore')
@@ -62,8 +70,11 @@ class ResultsActions extends React.Component {
               <li>
                 <a href="#">{t('results.sortBy')}: {sortBy}</a>
                 <ul className="menu">
-                  <li><a onClick={() => this.changeSort('InputDate')}>{t('results.inputDate')}</a></li>
-                  <li><a onClick={() => this.changeSort('PresentationDate')}>{t('results.presentationDate')}</a></li>
+                  {/*<li><a onClick={() => this.changeSort('InputDate')}>{t('results.inputDate')}</a></li>
+                  <li><a onClick={() => this.changeSort('PresentationDate')}>{t('results.presentationDate')}</a></li>*/}
+                  {
+                    sortData.map(sortItem => <li><a onClick={() => this.changeSort(sortItem.sort)}>{t(`results.${sortItem.title}`)}</a></li>)
+                  }
                 </ul>
               </li>
             </ul>
