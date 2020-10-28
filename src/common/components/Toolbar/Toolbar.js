@@ -12,7 +12,7 @@ import  './Toolbar.scss'
 
 const req = require.context('common/style/icons/', false)
 const emailSrc = req('./mail.png').default
-const printSrc = req('./print.svg').default
+const printSrc = req('./pdf-icon.svg').default //req('./print.svg').default
 const printImageSrc = req('./image.svg').default
 const actionFavSrc = req('./action_fav.svg').default
 
@@ -107,7 +107,7 @@ class Toolbar extends React.Component {
               <div className="medium-3 cell">
                 <ul className="menu align-left" styleName="align-left">
                   <li><a onClick={this.email}><img src={emailSrc} alt={t('toolbar.email')} data-tip={t('toolbar.email')} /></a></li>
-                  <li><a onClick={() => this.print(false)}><img src={printSrc} alt={t('toolbar.print')} data-tip={t('toolbar.print')} /></a></li>
+                  <li><a onClick={() => this.print(false)}><img src={printSrc} alt={t('toolbar.pdf')} data-tip={t('toolbar.pdf')} /></a></li>
                   <li><a onClick={() => this.print(true)}><img src={printImageSrc} alt={t('toolbar.printBig')} data-tip={t('toolbar.printBig')} /></a></li>
                   <li><a onClick={this.addFavorites}><img src={actionFavSrc} alt={t('toolbar.fav')} data-tip={t('toolbar.fav')} /></a></li>
                 </ul>
