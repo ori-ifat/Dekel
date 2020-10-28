@@ -9,6 +9,8 @@ import { mainStore } from 'stores'
 import { translate } from 'react-polyglot'
 import MainTitle from './MainTitle'
 //import MainList from './MainList'
+import ResultsActions from 'components/Results/ResultsActions'
+import TableHeader from 'common/components/TableHeader'
 import Filters from 'components/Results/Filters'
 import List from 'common/components/List'
 import NotLogged from 'common/components/NotLogged'
@@ -41,10 +43,16 @@ class Main extends Component {
     onFav: func
   }
 
-  componentWillMount() {
+  @observable isTable = false
+
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(true)
     fixTopMenu()
+  }
+
+  changeView = () => {
+    this.isTable = !this.isTable
   }
 
   render() {
@@ -74,13 +82,22 @@ class Main extends Component {
                         <Filters store={mainStore} />
                       </div>
                       <div className="cell large-9">
-                        <List
-                          store={mainStore}
-                          loadMore={mainStore.loadNextResults}
-                          onCheck={onCheck}
-                          onFav={onFav}
-                          checkedItems={checkedItems} />
-
+                        <ResultsActions 
+                          changeView={this.changeView} 
+                          isTable={this.isTable} 
+                          isAgent={true} 
+                        />
+                        <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
+                          {this.isTable && <TableHeader t={t} />}
+                          <List
+                            store={mainStore}
+                            loadMore={mainStore.loadNextResults}
+                            onCheck={onCheck}
+                            onFav={onFav}
+                            checkedItems={checkedItems} 
+                            isTable={this.isTable}
+                          />
+                        </div>
                         {/*<Banner banner={toJS(mainStore.banner)} />
                       <br />
                       <h6 styleName="more-tenders-title">{t('main.moreTenders')}</h6>

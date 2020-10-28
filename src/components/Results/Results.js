@@ -9,6 +9,7 @@ import { searchStore, recordStore } from 'stores'
 import SearchInput from 'common/components/SearchInput'
 import Title from 'common/components/Title'
 import ResultsActions from './ResultsActions'
+import TableHeader from 'common/components/TableHeader'
 import List from 'common/components/List'
 import Filters from './Filters'
 import Banners from './Banners'
@@ -51,7 +52,7 @@ export default
   @observable isHomeResults = false
   @observable isTable = false
 
-  componentWillMount() {
+  componentDidMount() {
     const { match: {params: { isHome }} } = this.props
     //console.log('isHome', isHome)
     this.isHomeResults = isHome
@@ -128,17 +129,7 @@ export default
                     <ResultsActions changeView={this.changeView} isTable={this.isTable} />
                     {/*<a onClick={this.changeView}>change view</a>*/}
                     <div style={this.isTable ? {backgroundColor: '#fff'} : null}>
-                      {this.isTable && <div styleName="table_h">    
-                        <div styleName="checkbox"></div>
-                        <div styleName="cell_item title"><span styleName="cell-item">{t('results.tableTitle')}</span></div>
-                        <div styleName="cell_item publisher"><span styleName="cell-item">{t('results.publisher')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.number')}</span></div>    
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.classes')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.detailsLevel')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.tour')}</span></div>
-                        <div styleName="cell_item info"><span styleName="cell-item">{t('results.presentation')}</span></div>
-                        <div styleName="cell_item info-small"></div>
-                      </div>}
+                      {this.isTable && <TableHeader t={t} />}
                       <List
                         store={searchStore}
                         loadMore={searchStore.loadNextResults}

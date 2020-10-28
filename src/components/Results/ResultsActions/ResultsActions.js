@@ -48,7 +48,7 @@ class ResultsActions extends React.Component {
   }
 
   render() {
-    const { changeView, isTable, t } = this.props
+    const { changeView, isTable, isAgent, t } = this.props
     const { sort } = this.state
     const sortBy = sort && sort == 'InputDate' ? t('results.inputDate') : t('results.presentationDate')
 
@@ -66,7 +66,7 @@ class ResultsActions extends React.Component {
             </div>
           </div>
           <div className="medium-6 cell">
-            <ul className="dropdown menu align-left sort" styleName="sort" id="sort" data-dropdown-menu data-disable-hover="true" data-click-open="true">
+            {!isAgent && <ul className="dropdown menu align-left sort" styleName="sort" id="sort" data-dropdown-menu data-disable-hover="true" data-click-open="true">
               <li>
                 <a href="#">{t('results.sortBy')}: {sortBy}</a>
                 <ul className="menu">
@@ -77,7 +77,7 @@ class ResultsActions extends React.Component {
                   }
                 </ul>
               </li>
-            </ul>
+            </ul>}
           </div>
         </div>
       </div>
