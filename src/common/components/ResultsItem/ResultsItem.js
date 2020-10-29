@@ -355,9 +355,9 @@ const ResultsItemBlock = ({
         dangerouslySetInnerHTML={markUpText(item.title)}></h3>
       <Link to={`/tender/${item.encID}`} target='_blank' styleName="new_tab"><img src={newTabSrc} /></Link>
    
-      { logged &&
+      { logged && item.winners && 
       <div styleName="tender_meta">
-        <span>{t('tender.results')}: אור שי סיטונאות חשמל, חשמל ישיר חולון בע"מ</span>
+        <span>{t('tender.results')}: {item.winners}</span>
       </div>
       }
 

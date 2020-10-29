@@ -15,9 +15,8 @@ const tblSelectedSrc = req('./table_selected.svg').default
 const sortData = [
   { title: 'inputDate', sort: 'InputDate'},
   { title: 'presentationDate', sort: 'PresentationDate'},
-  { title: 'tourDate', sort: 'TourDate'},
-  { title: 'tenderDate', sort: 'TenderDate'},
-  { title: 'tenderNum', sort: 'TenderNum'}
+  { title: 'tourDate', sort: 'TourDate'},  
+  { title: 'tenderNumber', sort: 'TenderNumber'}
 ]
 
 export default
@@ -50,7 +49,9 @@ class ResultsActions extends React.Component {
   render() {
     const { changeView, isTable, isAgent, t } = this.props
     const { sort } = this.state
-    const sortBy = sort && sort == 'InputDate' ? t('results.inputDate') : t('results.presentationDate')
+    //const sortBy = sort && sort == 'InputDate' ? t('results.inputDate') : t('results.presentationDate')
+    const sortLabel = sortData.filter(sortItem => sortItem.sort === sort)    
+    const sortBy = t(`results.${sortLabel[0].title}`)
 
     return (
       <div styleName="select_all">
@@ -69,11 +70,9 @@ class ResultsActions extends React.Component {
             {!isAgent && <ul className="dropdown menu align-left sort" styleName="sort" id="sort" data-dropdown-menu data-disable-hover="true" data-click-open="true">
               <li>
                 <a href="#">{t('results.sortBy')}: {sortBy}</a>
-                <ul className="menu">
-                  {/*<li><a onClick={() => this.changeSort('InputDate')}>{t('results.inputDate')}</a></li>
-                  <li><a onClick={() => this.changeSort('PresentationDate')}>{t('results.presentationDate')}</a></li>*/}
+                <ul className="menu">                 
                   {
-                    sortData.map(sortItem => <li><a onClick={() => this.changeSort(sortItem.sort)}>{t(`results.${sortItem.title}`)}</a></li>)
+                    sortData.map((sortItem, index) => <li key={`${sortItem.title}_${index}`}><a onClick={() => this.changeSort(sortItem.sort)}>{t(`results.${sortItem.title}`)}</a></li>)
                   }
                 </ul>
               </li>
