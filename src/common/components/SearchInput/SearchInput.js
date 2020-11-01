@@ -13,6 +13,11 @@ import remove from 'lodash/remove'
 import {autocomplete} from 'common/services/apiService'
 import enhanceWithClickOutside from 'react-click-outside'
 
+import DateFilter from 'components/Results/Filters/DateFilter'
+import DateButtons from 'components/Results/Filters/DateButtons'
+import DateCombo from './DateCombo'
+import { getDefaultDates } from 'common/utils/filter'
+
 const req = require.context('common/style/icons/', false)
 const search_go = req('./search_go.svg').default
 
@@ -30,7 +35,8 @@ class SearchInput extends Component {
 
   @observable selectedValues =[]
   @observable showSaved = false
-
+  @observable dateField = 'inputDate'
+  
   componentWillMount() {
     const {searchStore, tags} = this.props
     if (tags) this.selectedValues = tags
@@ -166,16 +172,38 @@ class SearchInput extends Component {
     routingStore.push(`/results/${sort}/[]/[]`)
   }
 
+  chooseDateField = field => {
+    this.dateField = field
+    //set the date field name
+    const { searchStore, t } = this.props
+    searchStore.setSelectedFilters('dateField', this.dateField, t('filter.more'))
+  }
+
+
   render() {
     const selectedValues = toJS(this.selectedValues)
-    const {searchStore, t} = this.props
+    const {searchStore, searchStore: {selectedFilters}, t} = this.props
+    const dateField = selectedFilters ? selectedFilters.dateField || 'inputDate' : 'inputDate'
+    const defaultDates = getDefaultDates(this.selectedValues)
+    const dateValues = selectedFilters && selectedFilters.date ? selectedFilters.date[dateField] || defaultDates : defaultDates
 
     return (
       <div styleName="cont">
         <div className="row">
           <div className="medium-12 columns">
-            <div id="searchbox_wrapper" styleName="wrapper">
+            <div id="searchbox_wrapper" styleName="wrapper" style={{display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-end'}}>
               <a styleName="search_btn" onClick={this.onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
+              <div style={{display: 'flex', paddingRight: '10px'}}>
+                <DateFilter
+                  dateField={this.dateField}
+                  chooseDateField={this.chooseDateField}
+                  dateValues={dateValues}
+                  store={searchStore}
+                />                
+              </div>
+              <div style={{paddingRight: '10px'}}>
+                <DateCombo chooseDateField={this.chooseDateField} t={t} />
+              </div>
               <Select.Async
                 styleName="select-searchbox"
                 className="search-select"
@@ -201,17 +229,24 @@ class SearchInput extends Component {
                 <SavedSearches />
               }
             </div>
-            <div styleName="reset_container">
-              <div styleName="subsubjects">               
-                <ClassesFilter 
-                  items={toJS(searchStore.classes)}
-                  isTag={true}
-                  store={searchStore}
-                />
+            <div style={{display: 'flex'}}>
+              <div styleName="reset_container">
+                <div styleName="subsubjects">
+                  <ClassesFilter
+                    items={toJS(searchStore.classes)}
+                    isTag={true}
+                    store={searchStore}
+                  />
+                </div>
+                <div styleName="clear_s">
+                  <a onClick={this.onClear}>{t('search.cleanSearch')}</a>
+                </div>
               </div>
-              <div styleName="clear_s">
-                <a onClick={this.onClear}>{t('search.cleanSearch')}</a>
-              </div>
+              <DateButtons
+                dateField={this.dateField}
+                chooseDateField={this.chooseDateField}
+                store={searchStore}
+              />
             </div>
           </div>
         </div>

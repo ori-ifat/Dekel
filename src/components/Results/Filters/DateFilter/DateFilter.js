@@ -75,14 +75,15 @@ class DateFilter extends React.Component {
   }
 
   render() {
-    const {dateField, chooseDateField, t} = this.props    
+    const {dateField, chooseDateField, t} = this.props  
+    const isOnFilter = false  //move to prop if needed
     const clsLeft = dateField == 'resultDate' ? 'dates-left selected' : 'dates-left'
     const clsRight = dateField == 'inputDate' ? 'dates-right selected' : 'dates-right'
     const clsMiddle = dateField == 'presentationDate' ? 'dates-middle selected' : 'dates-middle'
 
     return(
       <div styleName="dateContainer">
-        <div styleName="tabs_container">
+        {isOnFilter && <div styleName="tabs_container">
           <div styleName={clsRight} onClick={() => chooseDateField('inputDate')} style={{cursor: 'pointer'}}>
             {t('filter.inputDate')}
           </div>
@@ -94,12 +95,12 @@ class DateFilter extends React.Component {
           <div styleName={clsLeft} onClick={() => chooseDateField('resultDate')} style={{cursor: 'pointer'}}>
             {t('filter.resultDate')}
           </div>
-        </div>
+        </div>}
         <div className="grid-x">
 
 
           <div className="small-6 cell">
-            <span styleName="date_lable">{t('filter.from')}</span>
+            {isOnFilter && <span styleName="date_lable">{t('filter.from')}</span>}
             <div>
               <Calendar
                 name="startDate"
@@ -115,7 +116,7 @@ class DateFilter extends React.Component {
           </div>
 
           <div className="small-6 cell">
-            <span styleName="date_lable">{t('filter.to')}</span>
+            {isOnFilter && <span styleName="date_lable">{t('filter.to')}</span>}
 
             <div>
               <Calendar

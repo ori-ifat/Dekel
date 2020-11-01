@@ -1,9 +1,9 @@
 import React from 'react'
 import { object } from 'prop-types'
 import { /*inject,*/ observer } from 'mobx-react'
-import {observable, toJS} from 'mobx'
+import {/*observable,*/ toJS} from 'mobx'
 import { translate } from 'react-polyglot'
-import { getDefaultDates } from 'common/utils/filter'
+//import { getDefaultDates } from 'common/utils/filter'
 //import moment from 'moment'
 import find from 'lodash/find'
 import filter from 'lodash/filter'
@@ -11,8 +11,8 @@ import MultipleFilter from './MultipleFilter'
 import ClassesFilter from 'common/components/ClassesFilter'
 //import ComboFilter from './ComboFilter'
 import DetailsLevelFilter from './DetailsLevelFilter'
-import DateFilter from './DateFilter'
-import DateButtons from './DateButtons'
+//import DateFilter from './DateFilter'
+//import DateButtons from './DateButtons'
 import SingleCheckFilter from './SingleCheckFilter'
 import SearchTextFilter from './SearchTextFilter'
 import Loading from 'common/components/Loading/Loading'
@@ -29,7 +29,7 @@ class Filters extends React.Component {
     store: object
   }  
 
-  @observable dateField = 'inputDate'
+  //@observable dateField = 'inputDate'
 
   componentWillMount() {
     //console.log('filters mount')
@@ -79,12 +79,12 @@ class Filters extends React.Component {
     store.loadNextFilters() //cached, but will allow filters to be unchecked on child components
   }
 
-  chooseDateField = field => {
+  /*chooseDateField = field => {
     this.dateField = field
     //set the date field name
     const { store, t } = this.props
     store.setSelectedFilters('dateField', this.dateField, t('filter.more'))
-  }
+  }*/
 
   render() {
     const {store, store: {resultsLoading, filtersLoading, selectedFilters, tags}, t} = this.props
@@ -92,9 +92,9 @@ class Filters extends React.Component {
     const classes = selectedFilters ? selectedFilters.classes : ''
     const publishers = selectedFilters ? selectedFilters.publishers : ''
     const areas = selectedFilters ? selectedFilters.areas : ''
-    const dateField = selectedFilters ? selectedFilters.dateField || 'inputDate' : 'inputDate'
-    const defaultDates = getDefaultDates(tags)
-    const dateValues = selectedFilters && selectedFilters.date ? selectedFilters.date[dateField] || defaultDates : defaultDates
+    //const dateField = selectedFilters ? selectedFilters.dateField || 'inputDate' : 'inputDate'
+    //const defaultDates = getDefaultDates(tags)
+    //const dateValues = selectedFilters && selectedFilters.date ? selectedFilters.date[dateField] || defaultDates : defaultDates
     const text = selectedFilters ? selectedFilters.searchText : ''    
     const classItems = store.availableFilters && (store.availableFilters.fatherClasses || [])
     const publisherItems = store.availableFilters && store.availableFilters.publishers ? 
@@ -106,7 +106,7 @@ class Filters extends React.Component {
     //console.log('filters', toJS(store.availableFilters))
     return(
       <div styleName="filter_container">
-        <DateFilter
+        {/*<DateFilter
           dateField={this.dateField}
           chooseDateField={this.chooseDateField}
           dateValues={dateValues}
@@ -116,7 +116,7 @@ class Filters extends React.Component {
           dateField={this.dateField}
           chooseDateField={this.chooseDateField}
           store={store}
-        />
+        />*/}
         <Spacer />
         <div styleName="filter_ttl">
           <a styleName="clean" onClick={this.cleanFilters}>{t('filter.clean')}</a>
