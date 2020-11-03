@@ -157,13 +157,8 @@ class ResultsItem extends React.Component {
 
   continueUnlogged = () => {
     this.showLoginMsg = false
-  }
+  }  
   
-  /*
-  cutText = text => { 
-    return text && text.length > 20 ? text.substr(0, 20) + '...' : text 
-  }
-*/
   render() {
     const { accountStore, item, onCheck, checked, onFav, isTable, t } = this.props    
     const cbItem = Object.assign({}, item, {checked, isFavorite: this.isFavorite}) //merge this.isFavorite to current item
@@ -194,9 +189,10 @@ class ResultsItem extends React.Component {
     const reminderToolTip = item.reminderDate ? 
       moment(item.reminderDate).format('DD-MM-YYYY') :
       hasReminder ? moment(this.newReminderDate).format('DD-MM-YYYY') : t('tender.addReminder')
+      
     return (
       <div styleName={tenderStyle} >
-        {isTable ? <ResultsItemRow
+        <RowType isTable={isTable} 
           item={item}
           onCheck={onCheck}
           onFav={onFav}
@@ -228,39 +224,8 @@ class ResultsItem extends React.Component {
           remind={this.remind}
           newReminderDate={this.newReminderDate}
           t={t}
-        /> : <ResultsItemBlock
-        item={item}
-        onCheck={onCheck}
-        onFav={onFav}
-        addFav={this.addFav}
-        checked={checked}
-        isFavorite={this.isFavorite}
-        cbItem={cbItem}
-        twoDaysLeft={twoDaysLeft}
-        oneDayLeft={oneDayLeft}
-        noDaysLeft={noDaysLeft}
-        twoDaysLeftTour={twoDaysLeftTour}
-        oneDayLeftTour={oneDayLeftTour}
-        tourToday={tourToday}
-        mustDoTourLabel={mustDoTourLabel}
-        visitedStyle={visitedStyle}
-        newTabSrc={newTabSrc}
-        logged={logged}
-        inputDate={inputDate}
-        hasReminder={hasReminder}
-        timeActSrc={timeActSrc}
-        timeSrc={timeSrc}
-        reminderToolTip={reminderToolTip}
-        favActSrc={favActSrc}
-        favSrc={favSrc}
-        presentationDate={presentationDate}
-        tourDate={tourDate}
-        markUpText={this.markUpText}
-        viewDetails={this.viewDetails}
-        remind={this.remind}
-        newReminderDate={this.newReminderDate}
-        t={t}
-      />}
+        />
+
         {this.viewBig && !this.showImage && logged &&
         <ItemDetailsModal
           itemID={item.tenderID}
@@ -298,6 +263,10 @@ class ResultsItem extends React.Component {
       </div>
     )
   }
+}
+
+const RowType = (props) => {
+  return props.isTable ? <ResultsItemRow {...props} /> : <ResultsItemBlock {...props} />
 }
 
 const ResultsItemBlock = ({
@@ -419,7 +388,7 @@ const ResultsItemBlock = ({
         </span>}
         {tourDate && 
         <span>{t('results.tourDetails')}:&nbsp;
-          <span>{tourDate} <span style={{color: '#ed1d24'}}>{item.mustDoTour ? t('results.mustDoTour') : ''}</span></span>
+          <span styleName={item.mustDoTour ? 'tourdate-label' : null}>{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</span>
         </span>}               
       </div>
     </div>
@@ -435,18 +404,7 @@ const ResultsItemRow = ({
   addFav,
   checked, 
   isFavorite,
-  cbItem, 
-  twoDaysLeft, 
-  oneDayLeft, 
-  noDaysLeft, 
-  twoDaysLeftTour, 
-  oneDayLeftTour, 
-  tourToday, 
-  mustDoTourLabel, 
-  visitedStyle,
-  newTabSrc,
-  logged,
-  inputDate,
+  cbItem,
   hasReminder,
   timeActSrc,
   timeSrc,
@@ -475,7 +433,7 @@ const ResultsItemRow = ({
     <div styleName="cell_item info"><div styleName="cell-item">{item.tenderNumber}</div></div>    
     <div styleName="cell_item info"><div styleName="cell-item">{item.classes}</div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{item.detailLevelName}</div></div>
-    <div styleName="cell_item info"><div styleName="cell-item">{tourDate} <span style={{color: '#ed1d24'}}>{item.mustDoTour ? t('results.mustDoTour') : ''}</span></div></div>
+    <div styleName="cell_item info"><div styleName="cell-item"><span styleName={item.mustDoTour ? 'tourdate-label' : null}>{tourDate} {item.mustDoTour ? t('results.mustDoTour') : ''}</span></div></div>
     <div styleName="cell_item info"><div styleName="cell-item">{presentationDate}</div></div>
     <div styleName="cell_item info-small">
       <ul className="no-bullet">
