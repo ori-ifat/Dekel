@@ -191,43 +191,49 @@ class SearchInput extends Component {
       <div styleName="cont">
         <div className="row">
           <div className="medium-12 columns">
-            <div id="searchbox_wrapper" styleName="wrapper" style={{display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-end'}}>
+            <div styleName="main_wrapper">
+
+              <div id="searchbox_wrapper" styleName="search_continer">
+                <Select.Async
+                  styleName="select-searchbox"
+                  className="search-select"
+                  name="searchbox"
+                  placeholder={t('search.placeHolder')}
+                  autoFocus={(this.selectedValues.length > 0)}
+                  noResultsText={null}
+                  searchPromptText=""
+                  multi={true}
+                  cache={false}
+                  clearable={false}
+                  loadOptions={this.getOptions}
+                  optionRenderer={this.optionRenderer}
+                  onChange={this.onChange}
+                  onFocus={this.onFocus}
+                  onInputKeyDown={this.onInputKeyDown}
+                  filterOptions={this.filterOptions}
+                  value={selectedValues}
+                  labelKey={'name'}
+                  valueKey={'uniqueID'}
+                />
+                {this.showSaved &&
+                  <SavedSearches />
+                }
+              </div>
+
+              <div styleName="date_continer">
+                <div styleName="selector">
+                  <DateCombo chooseDateField={this.chooseDateField} t={t} />
+                </div>
+                <div styleName="picker" >
+                  <DateFilter
+                    dateField={this.dateField}
+                    chooseDateField={this.chooseDateField}
+                    dateValues={dateValues}
+                    store={searchStore}
+                  />                
+                </div>
+              </div>
               <a styleName="search_btn" onClick={this.onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
-              <div style={{display: 'flex', paddingRight: '10px'}}>
-                <DateFilter
-                  dateField={this.dateField}
-                  chooseDateField={this.chooseDateField}
-                  dateValues={dateValues}
-                  store={searchStore}
-                />                
-              </div>
-              <div style={{paddingRight: '10px'}}>
-                <DateCombo chooseDateField={this.chooseDateField} t={t} />
-              </div>
-              <Select.Async
-                styleName="select-searchbox"
-                className="search-select"
-                name="searchbox"
-                placeholder={t('search.placeHolder')}
-                autoFocus={(this.selectedValues.length > 0)}
-                noResultsText={null}
-                searchPromptText=""
-                multi={true}
-                cache={false}
-                clearable={false}
-                loadOptions={this.getOptions}
-                optionRenderer={this.optionRenderer}
-                onChange={this.onChange}
-                onFocus={this.onFocus}
-                onInputKeyDown={this.onInputKeyDown}
-                filterOptions={this.filterOptions}
-                value={selectedValues}
-                labelKey={'name'}
-                valueKey={'uniqueID'}
-              />
-              {this.showSaved &&
-                <SavedSearches />
-              }
             </div>
             <div style={{display: 'flex'}}>
               <div styleName="reset_container">

@@ -96,13 +96,10 @@ class DateFilter extends React.Component {
             {t('filter.resultDate')}
           </div>
         </div>}
-        <div className="grid-x">
 
-
-          <div className="small-6 cell">
             {isOnFilter && <span styleName="date_lable">{t('filter.from')}</span>}
-            <div>
-              <Calendar
+            <div styleName="continer">
+              מ: <Calendar
                 name="startDate"
                 defaultDate={this.startDate}
                 todayLabel={t('filter.today')}
@@ -112,14 +109,12 @@ class DateFilter extends React.Component {
                 minDate={moment().subtract(10, 'year')}
                 maxDate={moment().add(1, 'year')}
               />
-            </div>
-          </div>
 
-          <div className="small-6 cell">
+
             {isOnFilter && <span styleName="date_lable">{t('filter.to')}</span>}
 
-            <div>
-              <Calendar
+
+              עד: <Calendar
                 name="endDate"
                 defaultDate={this.endDate}
                 todayLabel={t('filter.today')}
@@ -129,8 +124,6 @@ class DateFilter extends React.Component {
                 minDate={moment().subtract(10, 'year')}
                 maxDate={moment().add(1, 'year')}
               />
-            </div>
-          </div>
 
         </div>
       </div>

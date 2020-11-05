@@ -64,6 +64,8 @@ export default @observer class ComboFilter extends React.Component {
     return(
       <div>
         <Select
+          style={{ width: 120 }}
+          bordered={false}
           className="search-select"
           name="filter"
           placeholder={placeHolder}

@@ -28,6 +28,8 @@
 
 .dateContainer {
   //margin-top: 2rem; //isOnFilter
+  display: flex;
+  height: 100%;
   .tabs_container {
     border-bottom: 1px solid $medium-gray;
     display: flex;
@@ -41,4 +43,22 @@
     padding:0.5rem;
     
   }
+
+}
+.continer {
+  display: flex;
+  align-items: center;
+  input {
+    border: 0px solid transparent;
+    font-size: 13px;
+  }
+ 
+}
+.ant-select {
+  border: 0px solid transparent !important;
+  background-color: turquoise !important;
+}
+
+.ant-select-arrow {
+  left: 8px !important;
 }
