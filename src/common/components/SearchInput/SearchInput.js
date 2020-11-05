@@ -235,7 +235,7 @@ class SearchInput extends Component {
               </div>
               <a styleName="search_btn" onClick={this.onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
             </div>
-            <div style={{display: 'flex'}}>
+            <div styleName="links_continer">
               <div styleName="reset_container">
                 <div styleName="subsubjects">
                   <ClassesFilter
@@ -248,11 +248,14 @@ class SearchInput extends Component {
                   <a onClick={this.onClear}>{t('search.cleanSearch')}</a>
                 </div>
               </div>
-              <DateButtons
-                dateField={this.dateField}
-                chooseDateField={this.chooseDateField}
-                store={searchStore}
-              />
+              <div styleName="date_buttons">
+                <DateButtons
+                  dateField={this.dateField}
+                  chooseDateField={this.chooseDateField}
+                  store={searchStore}
+                />
+              </div>
+
             </div>
           </div>
         </div>

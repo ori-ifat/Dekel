@@ -70,15 +70,9 @@ class DateButtons extends React.Component {
     const timeCaption = dateField == 'inputDate' || dateField == 'resultDate' ? 'last' : 'next'
     return(
       <div>
-        <div className="grid-x">
-
-          <div className="small-12 cell" style={{paddingTop: '10px'}}>
-            <a styleName="date-button first" onClick={() => this.selectDate('day')}>{t(`filter.${timeCaption}Day`)}</a>
-            <a styleName="date-button" onClick={() => this.selectDate('week')}>{t(`filter.${timeCaption}Week`)}</a>
-            <a styleName="date-button" onClick={() => this.selectDate('month')}>{t(`filter.${timeCaption}Month`)}</a>
-          </div>
-
-        </div>
+        <a styleName="date-button first" onClick={() => this.selectDate('day')}>{t(`filter.${timeCaption}Day`)}</a>
+        <a styleName="date-button" onClick={() => this.selectDate('week')}>{t(`filter.${timeCaption}Week`)}</a>
+        <a styleName="date-button" onClick={() => this.selectDate('month')}>{t(`filter.${timeCaption}Month`)}</a>
       </div>
     )
   }
