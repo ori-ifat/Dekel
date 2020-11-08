@@ -1,4 +1,4 @@
-@import '~common/style/_settings.scss';
+/*@import '~common/style/_settings.scss';
 
 .sort {
 	@media screen and (min-width: 800px) {
@@ -10,5 +10,16 @@
 		font-size: rem-calc(15);
 		padding-top: 0.3rem;
 		padding-bottom: 0.3rem;
+	}
+}*/
+
+.branch {
+	background-color: #ffffff !important;
+	text-align: right;
+	width: 100%;
+  border: 1px solid #DEDEDE !important;
+  border-radius: 2px;
+	div {
+		background-color: #fff !important;
 	}
 }
