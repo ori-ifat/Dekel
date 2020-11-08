@@ -10,6 +10,12 @@ export default
 class DateCombo extends React.Component {
   
   @observable shown = false
+  @observable selected = ''
+
+  componentDidMount() {
+    const {t} = this.props
+    this.selected = t('filter.inputDate')
+  }
 
   setShown = () => {
     this.shown = !this.shown
@@ -20,15 +26,22 @@ class DateCombo extends React.Component {
     this.shown = false
   }
 
-  render() {
+  choose = (value) => {
     const {chooseDateField, t} = this.props
+    this.selected = t(`filter.${value}`)
+    chooseDateField(value)
+    this.shown = false
+  }
+
+  render() {
+    const {t} = this.props
     return <ul styleName="combo-wrapper">
       <li styleName="combo-container">
-        <a onClick={this.setShown}>show</a>  
+        <a onClick={this.setShown}>{this.selected}</a>  
         <ul style={this.shown ? null : {display: 'none'}} styleName="combo">                 
-          <li styleName="combo-item"><a onClick={() => chooseDateField('inputDate')}>{t('filter.inputDate')}</a></li>
-          <li styleName="combo-item"><a onClick={() => chooseDateField('presentationDate')}>{t('filter.presentationDate')}</a></li>
-          <li styleName="combo-item"><a onClick={() => chooseDateField('resultDate')}>{t('filter.resultDate')}</a></li>
+          <li styleName="combo-item"><a onClick={() => this.choose('inputDate')}>{t('filter.inputDate')}</a></li>
+          <li styleName="combo-item"><a onClick={() => this.choose('presentationDate')}>{t('filter.presentationDate')}</a></li>
+          <li styleName="combo-item"><a onClick={() => this.choose('resultDate')}>{t('filter.resultDate')}</a></li>
         </ul>
       </li>
     </ul>
