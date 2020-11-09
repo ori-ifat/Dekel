@@ -65,7 +65,7 @@ class Main extends Component {
         <div className="row">
           <div className="column large-12">
             <div styleName="search-div" >
-              <SearchInput />
+              <SearchInput isMain={true} />
               {profile ?
                 <div>
                   <MainTitle />

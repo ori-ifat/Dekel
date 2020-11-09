@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { array } from 'prop-types'
+import { array, bool } from 'prop-types'
 import  './SearchInput.scss'
 import {translate} from 'react-polyglot'
 import {inject, observer} from 'mobx-react'
@@ -25,12 +25,14 @@ export default
 @translate()
 @inject('routingStore')
 @inject('searchStore')
+@inject('mainStore')
 @inject('recordStore')
 @enhanceWithClickOutside
 @observer
 class SearchInput extends Component {
   static propTypes = {
-    tags: array
+    tags: array,
+    isMain: bool
   }
 
   @observable selectedValues =[]
@@ -175,14 +177,16 @@ class SearchInput extends Component {
   chooseDateField = field => {
     this.dateField = field
     //set the date field name
-    const { searchStore, t } = this.props
-    searchStore.setSelectedFilters('dateField', this.dateField, t('filter.more'))
+    const { searchStore, mainStore, isMain, t } = this.props
+    const store = isMain ? mainStore : searchStore
+    store.setSelectedFilters('dateField', this.dateField, t('filter.more'))
   }
 
 
   render() {
     const selectedValues = toJS(this.selectedValues)
-    const {searchStore, searchStore: {selectedFilters}, t} = this.props
+    const {searchStore, mainStore, isMain, searchStore: {selectedFilters}, t} = this.props
+    const filterStore = isMain ? mainStore : searchStore
     const dateField = selectedFilters ? selectedFilters.dateField || 'inputDate' : 'inputDate'
     const defaultDates = getDefaultDates(this.selectedValues)
     const dateValues = selectedFilters && selectedFilters.date ? selectedFilters.date[dateField] || defaultDates : defaultDates
@@ -252,7 +256,7 @@ class SearchInput extends Component {
                 <DateButtons
                   dateField={this.dateField}
                   chooseDateField={this.chooseDateField}
-                  store={searchStore}
+                  store={filterStore}
                 />
               </div>
 
