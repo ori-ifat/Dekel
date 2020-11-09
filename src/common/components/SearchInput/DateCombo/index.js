@@ -40,12 +40,12 @@ class DateCombo extends React.Component {
     const {t} = this.props
     return <div styleName="combo-wrapper">
 
-        <a styleName="combo-triger" onClick={this.setShown}>{this.selected}<img styleName="combo-icon" src={ddowno}/></a>  
-        <ul style={this.shown ? null : {display: 'none'}} styleName="combo">                 
-          <li styleName="combo-item"><a onClick={() => this.choose('inputDate')}>{t('filter.inputDate')}</a></li>
-          <li styleName="combo-item"><a onClick={() => this.choose('presentationDate')}>{t('filter.presentationDate')}</a></li>
-          <li styleName="combo-item"><a onClick={() => this.choose('resultDate')}>{t('filter.resultDate')}</a></li>
-        </ul>
+      <a styleName="combo-triger" onClick={this.setShown}>{this.selected}<img styleName="combo-icon" src={ddowno}/></a>  
+      <ul style={this.shown ? null : {display: 'none'}} styleName="combo">                 
+        <li styleName="combo-item"><a onClick={() => this.choose('inputDate')}>{t('filter.inputDate')}</a></li>
+        <li styleName="combo-item"><a onClick={() => this.choose('presentationDate')}>{t('filter.presentationDate')}</a></li>
+        <li styleName="combo-item"><a onClick={() => this.choose('resultDate')}>{t('filter.resultDate')}</a></li>
+      </ul>
 
     </div>
   }
