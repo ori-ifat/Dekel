@@ -6,16 +6,16 @@ $purpleOpacity: rgba(168, 133, 191, 0.2);
 $purpleDark: #835f9b;
 $purpleDarkWithOpacity: rgba(131, 95, 155, .0);
 $purpleDarkNoOpacity: rgba(131, 95, 155, 0.3);
-$gray: #545955;
+$gray: #444;
 $gray2: #989898;
 $gray3: #d7d7d7;
 $grayC: #cccccc;
 $grayDark: #292929;
 $grayLight: #ebebeb;
 $grayLighter: #f9f9f9;
-$greenLight: #b8e986;
-$greenDark: #7aa54e;
-$green: #459459;
+$greenLight: #ed1d24;
+$greenDark: #ed1d24;
+$green: #ed1d24;
 $em-default: 10px;
 
 :global {
@@ -73,7 +73,8 @@ $em-default: 10px;
       display: block;
       color: $gray !important;
       background: $white !important;
-      border: 1px solid #DEDEDE;
+      font-size: 14px;
+      color: #444;
       -webkit-box-shadow: 0 0 3px $purpleDarkWithOpacity;
       box-shadow: 0 0 3px $purpleDarkWithOpacity;
       -webkit-transition: border-color ease-in-out .15s,
@@ -86,9 +87,8 @@ $em-default: 10px;
       width: 100% !important;
 
       &:focus {
-        border-color: $green;
-        -webkit-box-shadow: 0 0 5px $purpleDarkNoOpacity;
-        box-shadow: 0 0 5px $purpleDarkNoOpacity;
+        border-color: transparent;
+
       }
     }
   }

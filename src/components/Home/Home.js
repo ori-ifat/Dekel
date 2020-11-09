@@ -123,7 +123,7 @@ class Home extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="column large-9 large-centered">
+              <div className="column large-12 large-centered">
                 <SearchInput />
               </div>
             </div>
