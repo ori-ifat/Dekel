@@ -25,7 +25,7 @@ class SearchTextFilter extends React.Component {
 
   @observable text = ''
 
-  componentWillMount() {
+  componentDidMount() {
     const {text} = this.props
     this.text = text
   }

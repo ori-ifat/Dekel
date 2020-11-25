@@ -7,7 +7,7 @@ import TenderComponent from 'components/Tender'
 export default class Tender extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

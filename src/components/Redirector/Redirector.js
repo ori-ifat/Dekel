@@ -11,7 +11,7 @@ export default class Redirector extends Component {
 
   //}
 
-  componentWillMount() {
+  componentDidMount() {
     //implement if needed:
     //const { match: {params: { where }} } = this.props
     //console.log('redirector', where)

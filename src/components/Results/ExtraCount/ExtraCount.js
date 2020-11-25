@@ -23,7 +23,7 @@ export default class ExtraCount extends React.Component {
   @observable extraCount = 0
   @observable loading = false
 
-  componentWillMount() {
+  componentDidMount() {
     const { searchStore } = this.props
     this.loading = true
     const tags = toJS(searchStore.tags)

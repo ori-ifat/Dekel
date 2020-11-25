@@ -34,7 +34,7 @@ export default class ContactAction extends React.Component {
 
   }
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
     this.status = ''
     this.isMobile = mobile()

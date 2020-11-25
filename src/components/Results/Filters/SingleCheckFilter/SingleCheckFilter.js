@@ -23,7 +23,7 @@ class SingleCheckFilter extends React.Component {
   @observable checked = false
   searching = false
 
-  componentWillMount() {
+  componentDidMount() {
     const {items, store} = this.props
     this.items = items
     this.isChecked(store.filters)

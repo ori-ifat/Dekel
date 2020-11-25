@@ -17,7 +17,7 @@ export default class Welcome extends React.Component {
     landingPage: string
   }
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
   }
 

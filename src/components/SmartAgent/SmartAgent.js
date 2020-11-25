@@ -44,7 +44,7 @@ class SmartAgent extends Component {
   //@observable alsoResult = 0
   @observable results = 1
 
-  componentWillMount() {
+  componentDidMount() {
     const {smartAgentStore, showNotification} = this.props
     smartAgentStore.loadAgentSettings().then(() => {
       this.frequencies = smartAgentStore.results.frequencies.filter(frequency => frequency.frequencySelected == 1)
@@ -260,7 +260,7 @@ class SmartAgent extends Component {
     return (
       <div>
         <div styleName="search-div" >
-          <SearchInput />
+          <SearchInput isMain={true} />
         </div>
         <div className="row" styleName="title-container">
           <div className="column large-12">
@@ -271,7 +271,7 @@ class SmartAgent extends Component {
           <div className="column large-12">
             {profile ?
               <div styleName="wrapper">
-                {!resultsLoading &&
+                {!resultsLoading && results && 
                 <div>
                   <div className="grid-x">
                     <div styleName="ttl_container" className="medium-3 cell">

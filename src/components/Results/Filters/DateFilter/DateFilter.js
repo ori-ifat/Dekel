@@ -26,7 +26,7 @@ class DateFilter extends React.Component {
   @observable startDate = moment()
   @observable endDate = moment()
 
-  componentWillMount() {
+  componentDidMount() {
     const {dateField, dateValues, chooseDateField} = this.props
     chooseDateField(dateField)
     this.setDefaultDates(dateValues)

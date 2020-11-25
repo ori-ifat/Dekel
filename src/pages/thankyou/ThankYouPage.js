@@ -7,7 +7,7 @@ import ThankYouComponent from 'components/ThankYou'
 export default class ThankYou extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

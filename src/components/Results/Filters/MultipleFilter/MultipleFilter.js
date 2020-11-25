@@ -44,7 +44,7 @@ class MultipleFilter extends React.Component {
   @observable label = ''
 
   /*
-  componentWillMount() {
+  componentDidMount() {
     this.init(this.props)
   }
 

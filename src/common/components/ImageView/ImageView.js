@@ -17,7 +17,7 @@ class ImageView extends Component {
     tenderID: number
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {tenderID} = this.props
     logImageView(tenderID)
   }

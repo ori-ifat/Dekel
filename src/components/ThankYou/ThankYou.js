@@ -14,7 +14,7 @@ import  './thankYou.scss'
 //@observer
 export default class ThankYou extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     GTAG.sendEvent()
   }
 
@@ -31,7 +31,7 @@ export default class ThankYou extends Component {
         <DocumentMeta {...meta} />
         {/*<div className="row">
           <div className="column large-9 large-centered" style={{marginTop: '3rem'}}>
-            <SearchInput />
+            <SearchInput isMain={true} />
           </div>
         </div>*/}
         <div className="row">

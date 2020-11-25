@@ -16,7 +16,7 @@ export default class Confirm extends React.Component {
     onClose: func
   }
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
   }
 

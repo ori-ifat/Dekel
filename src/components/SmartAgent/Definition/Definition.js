@@ -29,7 +29,7 @@ class Definition extends Component {
   @observable words = ''
   @observable edit = false
 
-  componentWillMount() {
+  componentDidMount() {
     this.initComponent(this.props)
   }
 

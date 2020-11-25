@@ -23,7 +23,7 @@ export default class Radar extends Component {
   @observable data;
   @observable tenderID = ''
 
-  componentWillMount() {
+  componentDidMount() {
     const { match: {params: { tender }} } = this.props
     if (tender) this.tenderID = tender
     getHomeJSON('Radar', 'radar').then(res => {

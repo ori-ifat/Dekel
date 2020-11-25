@@ -26,7 +26,7 @@ class Reminders extends Component {
 
   @observable itemId = -1
 
-  componentWillMount() {
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(false)
   }
@@ -52,7 +52,7 @@ class Reminders extends Component {
       <div>
         <div className="row">
           <div className="column large-12" styleName="search-div">
-            <SearchInput />
+            <SearchInput isMain={true} />
           </div>
         </div>
         <div className="row" styleName="title-container">

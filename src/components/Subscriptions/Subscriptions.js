@@ -18,7 +18,7 @@ export default class Subscriptions extends Component {
   @observable twoCatPartial = false
   @observable allCatPartial = false
 
-  componentWillMount() {
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(true)
   }

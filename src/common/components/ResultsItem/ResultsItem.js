@@ -56,7 +56,7 @@ class ResultsItem extends React.Component {
   @observable reminderID = -1
   @observable newReminderDate = '';
 
-  componentWillMount() {
+  componentDidMount() {
     //set favorite state from props
     const {fav, item: {reminderID, visited}} = this.props
     this.isFavorite = fav

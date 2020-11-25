@@ -41,7 +41,7 @@ class Footer extends React.Component {
   //@observable showLoginDialog = false
   //@observable publishers = []
 
-  componentWillMount() {
+  componentDidMount() {
     /*getFooterPublishers().then(res =>
       this.publishers = res
     )*/

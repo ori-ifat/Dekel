@@ -8,7 +8,7 @@ import WrapperComponent from 'components/Wrapper'
 export default class Results extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

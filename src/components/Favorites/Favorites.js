@@ -33,7 +33,7 @@ export default class Favorites extends Component {
     onFav: func
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(true)
   }
@@ -55,7 +55,7 @@ export default class Favorites extends Component {
 
     return (
       <div style={{marginTop: '50px'}}>
-        <SearchInput tags={toJS(tags)} />
+        <SearchInput tags={toJS(tags)} isMain={true} />
         {resultsLoading && <Loading />}
         {resultsCount == 0 && !resultsLoading && <NoData error={favoritesStore.searchError} />}
         {resultsCount > 0 &&

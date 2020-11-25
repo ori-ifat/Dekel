@@ -76,7 +76,7 @@ class Topbar extends Component {
   @observable showMobileMenu = false  
   cookVal;
 
-  componentWillMount() {    
+  componentDidMount() {    
     //fix top nav foundation creation bug
     fixTopMenu()
     //handle cookie for 'Welcome' component... 

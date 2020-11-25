@@ -31,7 +31,7 @@ class Filters extends React.Component {
 
   //@observable dateField = 'inputDate'
 
-  componentWillMount() {
+  componentDidMount() {
     //console.log('filters mount')
   }
 

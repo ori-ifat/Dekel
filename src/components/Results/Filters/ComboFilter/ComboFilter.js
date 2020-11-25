@@ -22,7 +22,7 @@ export default @observer class ComboFilter extends React.Component {
   @observable items = []
   @observable values;
 
-  componentWillMount() {
+  componentDidMount() {
     const {items, type, searchStore} = this.props
     this.type = type
     this.items = items

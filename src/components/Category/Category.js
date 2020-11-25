@@ -23,7 +23,7 @@ export default class Category extends Component {
   @observable count = 0;
   @observable tenders = []
 
-  componentWillMount() {
+  componentDidMount() {
     this.getCatData(this.props)
   }
 

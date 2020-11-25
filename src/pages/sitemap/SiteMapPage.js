@@ -7,7 +7,7 @@ import SiteMapComponent from 'components/SiteMap'
 export default class SiteMap extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

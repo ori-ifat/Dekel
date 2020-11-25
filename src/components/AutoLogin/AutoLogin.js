@@ -16,7 +16,7 @@ class AutoLogin extends Component {
 
   //@observable itemID = -1
 
-  componentWillMount() {
+  componentDidMount() {
     const { accountStore } = this.props
     if (accountStore.profile) {
       accountStore.logout().then(() => {

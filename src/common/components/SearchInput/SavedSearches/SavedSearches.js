@@ -17,7 +17,7 @@ class SavedSearches extends Component {
 
   @observable pinned = []
 
-  componentWillMount() {
+  componentDidMount() {
     this.loadSearches()
   }
   /*
@@ -75,14 +75,14 @@ class SavedSearches extends Component {
   }
 
   render() {
-    const {routingStore: {location: {pathname}}, savedStore, savedStore: {resultsLoading}, t} = this.props
-    const linkStyle = pathname.indexOf('home') > -1 ? 'action-links-min' : 'action-links'
+    const {routingStore: {location: {pathname}}, savedStore, savedStore: {resultsLoading}, isMain, t} = this.props
+    const linkStyle = pathname.indexOf('home') > -1 ? 'action-links-min' : `action-links${isMain ? '-main' : ''}`
     //console.log(toJS(savedStore.searches))
     return (
       <div className="row">
         <div className="medium-12 columns">
           <div styleName="container">
-            <h3 styleName="title">{t('searches.title')}</h3>
+            <h3 styleName={`title${isMain ? '-main' : ''}`}>{t('searches.title')}</h3>
             {
               !resultsLoading && savedStore.searches.map((query, index) => {
                 let label = ''

@@ -28,7 +28,7 @@ export default class ReminderItem extends React.Component {
   @observable reminderID = -1
   @observable deleteMe = false
 
-  componentWillMount() {
+  componentDidMount() {
     const { reminderID } = this.props
     this.reminderID = reminderID
   }

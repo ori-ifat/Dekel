@@ -18,7 +18,7 @@ export default class Checkbox extends React.Component {
 
   @observable checked = false
 
-  componentWillMount() {
+  componentDidMount() {
     const {checked} = this.props
     this.checked = checked
   }

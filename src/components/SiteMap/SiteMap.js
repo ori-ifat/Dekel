@@ -19,7 +19,7 @@ class SiteMap extends Component {
 
   @observable data;
 
-  componentWillMount() {
+  componentDidMount() {
     getHomeJSON('Sitemap', 'sitemap').then(res => {
       this.data = res
     })

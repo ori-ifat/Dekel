@@ -20,7 +20,7 @@ export default class Feedback extends React.Component {
   @observable feedback = 0
   @observable sent = false
 
-  componentWillMount() {
+  componentDidMount() {
     const {feedback} = this.props
     this.feedback = feedback
   }

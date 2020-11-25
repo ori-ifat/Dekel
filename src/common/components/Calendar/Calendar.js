@@ -25,7 +25,7 @@ export default @observer class Calendar extends React.Component {
 
   @observable selectedDate
 
-  componentWillMount() {
+  componentDidMount() {
     //const {defaultDate} = this.props
     //this.selectedDate = moment(defaultDate, 'DD-MM-YYYY') //not working ... needs further work to implement
     this.selectedDate = moment()

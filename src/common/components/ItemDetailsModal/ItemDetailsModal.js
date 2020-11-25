@@ -7,7 +7,7 @@ import  './ItemDetailsModal.scss'
 
 export default class ItemDetailsModal extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
   }
 

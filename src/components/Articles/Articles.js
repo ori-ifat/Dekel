@@ -19,7 +19,7 @@ export default class Article extends Component {
 
   @observable articles = []
 
-  componentWillMount() {
+  componentDidMount() {
     getHomeJSON('Articles', 'allArticles').then(res => {
       this.articles = res
     })

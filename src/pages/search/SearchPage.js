@@ -7,7 +7,7 @@ import SearchComponent from 'components/Search'
 export default class Search extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

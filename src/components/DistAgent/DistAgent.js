@@ -35,7 +35,7 @@ export default class DistAgent extends Component {
 
   @observable allowCheck = false
 
-  componentWillMount() {
+  componentDidMount() {
     //const { match: {params: { uid }} } = this.props
     //console.log(uid)
     //temp patch: redirect to old site page

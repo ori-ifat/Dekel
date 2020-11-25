@@ -35,7 +35,7 @@ class LoginDialog extends React.Component {
   @observable sentMessage = ''
   @observable sentError = false
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
   }
 

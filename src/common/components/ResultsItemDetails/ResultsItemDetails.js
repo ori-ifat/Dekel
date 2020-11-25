@@ -53,7 +53,7 @@ class ResultsItemDetails extends React.Component {
   @observable reminderID = -1
   @observable newReminderDate = '';
 
-  componentWillMount() {
+  componentDidMount() {
     this.loadItem(this.props)
   }
 

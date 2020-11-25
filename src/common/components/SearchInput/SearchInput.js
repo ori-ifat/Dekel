@@ -39,7 +39,7 @@ class SearchInput extends Component {
   @observable showSaved = false
   @observable dateField = 'inputDate'
   
-  componentWillMount() {
+  componentDidMount() {
     const {searchStore, tags} = this.props
     if (tags) this.selectedValues = tags
     this.showSaved = false
@@ -195,76 +195,192 @@ class SearchInput extends Component {
       <div styleName="cont">
         <div className="row">
           <div className="medium-12 columns">
-            <div styleName="main_wrapper">
-
-              <div id="searchbox_wrapper" styleName="search_continer">
-                <Select.Async
-                  styleName="select-searchbox"
-                  className="search-select"
-                  name="searchbox"
-                  placeholder={t('search.placeHolder')}
-                  autoFocus={(this.selectedValues.length > 0)}
-                  noResultsText={null}
-                  searchPromptText=""
-                  multi={true}
-                  cache={false}
-                  clearable={false}
-                  loadOptions={this.getOptions}
-                  optionRenderer={this.optionRenderer}
-                  onChange={this.onChange}
-                  onFocus={this.onFocus}
-                  onInputKeyDown={this.onInputKeyDown}
-                  filterOptions={this.filterOptions}
-                  value={selectedValues}
-                  labelKey={'name'}
-                  valueKey={'uniqueID'}
-                />
-                {this.showSaved &&
-                  <SavedSearches />
-                }
-              </div>
-
-              <div styleName="date_continer">
-                <div styleName="selector">
-                  <DateCombo chooseDateField={this.chooseDateField} t={t} />
-                </div>
-                <div styleName="picker" >
-                  <DateFilter
-                    dateField={this.dateField}
-                    chooseDateField={this.chooseDateField}
-                    dateValues={dateValues}
-                    store={searchStore}
-                  />                
-                </div>
-              </div>
-              <a styleName="search_btn" onClick={this.onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
-            </div>
-            <div styleName="links_continer">
-              <div styleName="reset_container">
-                <div styleName="subsubjects">
-                  <ClassesFilter
-                    items={toJS(searchStore.classes)}
-                    isTag={true}
-                    store={searchStore}
-                  />
-                </div>
-                <div styleName="clear_s">
-                  <a onClick={this.onClear}>{t('search.cleanSearch')}</a>
-                </div>
-              </div>
-              <div styleName="date_buttons">
-                <DateButtons
-                  dateField={this.dateField}
-                  chooseDateField={this.chooseDateField}
-                  store={filterStore}
-                />
-              </div>
-
-            </div>
+            {isMain ? 
+              <MainSearchElement
+                selectedValues={selectedValues} 
+                getOptions={this.getOptions} 
+                optionRenderer={this.optionRenderer} 
+                onChange={this.onChange} 
+                onFocus={this.onFocus} 
+                onClear={this.onClear}
+                onInputKeyDown={this.onInputKeyDown} 
+                onSearchClick={this.onSearchClick}
+                filterOptions={this.filterOptions} 
+                showSaved={this.showSaved}
+                searchStore={searchStore}
+                search_go={search_go}
+                t={t}
+              />
+              : <SearchElement 
+                selectedValues={selectedValues} 
+                getOptions={this.getOptions} 
+                optionRenderer={this.optionRenderer} 
+                onChange={this.onChange} 
+                onFocus={this.onFocus} 
+                onClear={this.onClear}
+                onInputKeyDown={this.onInputKeyDown} 
+                onSearchClick={this.onSearchClick}
+                filterOptions={this.filterOptions} 
+                showSaved={this.showSaved}
+                chooseDateField={this.chooseDateField}
+                dateField={this.dateField}
+                dateValues={dateValues}
+                searchStore={searchStore}
+                filterStore={filterStore}
+                search_go={search_go}
+                t={t}
+              />}
           </div>
         </div>
       </div>
 
     )
   }
+}
+
+const SearchElement = ({
+  selectedValues, 
+  getOptions, 
+  optionRenderer, 
+  onChange, 
+  onFocus, 
+  onClear,
+  onInputKeyDown, 
+  onSearchClick,
+  filterOptions, 
+  showSaved,
+  chooseDateField,
+  dateField,
+  dateValues,
+  searchStore,
+  filterStore,
+  search_go,
+  t
+}) => {
+  return <>
+    <div styleName="main_wrapper">
+
+      <div id="searchbox_wrapper" styleName="search_continer">
+        <Select.Async
+          styleName="select-searchbox"
+          className="search-select"
+          name="searchbox"
+          placeholder={t('search.placeHolder')}
+          autoFocus={(selectedValues.length > 0)}
+          noResultsText={null}
+          searchPromptText=""
+          multi={true}
+          cache={false}
+          clearable={false}
+          loadOptions={getOptions}
+          optionRenderer={optionRenderer}
+          onChange={onChange}
+          onFocus={onFocus}
+          onInputKeyDown={onInputKeyDown}
+          filterOptions={filterOptions}
+          value={selectedValues}
+          labelKey={'name'}
+          valueKey={'uniqueID'}
+        />
+        {showSaved &&
+          <SavedSearches />
+        }
+      </div>
+
+      <div styleName="date_continer">
+        <div styleName="selector">
+          <DateCombo chooseDateField={chooseDateField} t={t} />
+        </div>
+        <div styleName="picker" >
+          <DateFilter
+            dateField={dateField}
+            chooseDateField={chooseDateField}
+            dateValues={dateValues}
+            store={filterStore}
+          />                
+        </div>
+      </div>
+      <a styleName="search_btn" onClick={onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
+    </div>
+    <div styleName="links_continer">
+      <div styleName="reset_container">
+        <div styleName="subsubjects">
+          <ClassesFilter
+            items={toJS(searchStore.classes)}
+            isTag={true}
+            store={searchStore}
+          />
+        </div>
+        <div styleName="clear_s">
+          <a onClick={onClear}>{t('search.cleanSearch')}</a>
+        </div>
+      </div>
+      <div styleName="date_buttons">
+        <DateButtons
+          dateField={dateField}
+          chooseDateField={chooseDateField}
+          store={filterStore}
+        />
+      </div>
+
+    </div>
+  </>
+}
+
+const MainSearchElement = ({
+  selectedValues, 
+  getOptions, 
+  optionRenderer, 
+  onChange, 
+  onFocus, 
+  onClear,
+  onInputKeyDown, 
+  onSearchClick,
+  filterOptions, 
+  showSaved,  
+  searchStore,  
+  search_go,
+  t
+}) => {
+  return <>
+    <div id="searchbox_wrapper" styleName="wrapper">
+      <a styleName="search_btn_main" onClick={onSearchClick}><img src={search_go} styleName="search-arrow" /></a>
+      <Select.Async
+        styleName="select-searchbox main"
+        className="search-select"
+        name="searchbox"
+        placeholder={t('search.placeHolder')}
+        autoFocus={(selectedValues.length > 0)}
+        noResultsText={null}
+        searchPromptText=""
+        multi={true}
+        cache={false}
+        clearable={false}
+        loadOptions={getOptions}
+        optionRenderer={optionRenderer}
+        onChange={onChange}
+        onFocus={onFocus}
+        onInputKeyDown={onInputKeyDown}
+        filterOptions={filterOptions}
+        value={selectedValues}
+        labelKey={'name'}
+        valueKey={'uniqueID'}
+      />
+      {showSaved &&
+        <SavedSearches isMain={true} />
+      }
+    </div>
+    <div styleName="reset_container_main">
+      <div styleName="subsubjects">               
+        <ClassesFilter 
+          items={toJS(searchStore.classes)}
+          isTag={true}
+          store={searchStore}
+        />
+      </div>
+      <div styleName="clear_s">
+        <a onClick={onClear}>{t('search.cleanSearch')}</a>
+      </div>
+    </div>
+  </>
 }

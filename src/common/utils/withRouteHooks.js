@@ -2,7 +2,7 @@ import lifecycle from 'recompose/lifecycle'
 
 export const whenRouted = (onUpdate = Function.prototype) =>
   lifecycle({
-    componentWillMount() {
+    componentDidMount() {
       const { match } = this.props
       onUpdate(match)
     },

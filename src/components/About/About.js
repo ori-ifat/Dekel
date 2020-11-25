@@ -21,7 +21,7 @@ class About extends Component {
 
   @observable data;
 
-  componentWillMount() {
+  componentDidMount() {
     getHomeJSON('About', 'about').then(res => {
       this.data = res
     })

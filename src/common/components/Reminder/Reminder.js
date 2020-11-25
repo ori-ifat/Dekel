@@ -40,7 +40,7 @@ class Reminder extends Component {
   @observable reminderID = 0
   @observable deleteMe = false
 
-  componentWillMount() {
+  componentDidMount() {
     ReactModal.setAppElement('#root')
     this.initReminder()
   }

@@ -12,7 +12,7 @@ export default class Banners extends React.Component {
 
   @observable banners = [];
 
-  componentWillMount() {
+  componentDidMount() {
     //json data for hard-coded stuff:
     /*const cache = randomNumber(100000, 1000000)
     getHomeJSON('Banners', 'banners', cache).then(res => {

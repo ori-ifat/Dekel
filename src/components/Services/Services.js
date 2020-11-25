@@ -20,7 +20,7 @@ export default class Services extends Component {
 
   @observable services = []
 
-  componentWillMount() {
+  componentDidMount() {
     getHomeJSON('Services', 'services').then(res => {
       this.services = res
     })

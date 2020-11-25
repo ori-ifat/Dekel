@@ -7,7 +7,7 @@ import RadarComponent from 'components/Radar'
 export default class Radar extends Component {
 
 
-  //componentWillMount() {}
+  //componentDidMount() {}
   //componentWillReceiveProps = (nextProps, nextState) => {};
 
   render(){

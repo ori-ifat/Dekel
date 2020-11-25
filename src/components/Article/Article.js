@@ -20,7 +20,7 @@ export default class Article extends Component {
 
   @observable article;
 
-  componentWillMount() {
+  componentDidMount() {
     const { match: {params: { id }} } = this.props
     getHomeJSON('Articles', `article${id}`).then(res => {
       this.article = res

@@ -25,7 +25,7 @@ class DetailsLevelFilter extends React.Component {
   @observable selected = []
   searching = false
 
-  componentWillMount() {
+  componentDidMount() {
     //console.log('mount');    
     const {items, store} = this.props
     this.items = items

@@ -34,7 +34,7 @@ export default class Publish extends Component {
   @observable title = ''
   @observable description = ''
 
-  componentWillMount() {
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(true)
     GTAG.trackPage('Publish', 'publish')

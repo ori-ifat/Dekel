@@ -26,7 +26,7 @@ export default class SmallContactForm extends Component {
   @observable email = ''
   @observable phone = ''
 
-  componentWillMount() {
+  componentDidMount() {
 
   }
 

@@ -29,7 +29,7 @@ class Contact extends Component {
   @observable phone = ''
   @observable comment = ''
 
-  componentWillMount() {
+  componentDidMount() {
     const {showNotification} = this.props
     showNotification(true)
     GTAG.trackPage('Contact', 'contact')

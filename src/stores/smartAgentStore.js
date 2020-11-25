@@ -4,7 +4,7 @@ import {getAgentSettings, getSubSubjects, updateAgentSettings, isIfatUser, agent
 class SmartAgent {
   @observable resultsLoading = false
   @observable request = {};
-  @observable results = {}
+  @observable results = null //{}
   @observable searchError = null
   @observable classesLoading = false
   @observable classes = []
@@ -43,7 +43,7 @@ class SmartAgent {
       }
       else {
         console.error(this.searchError)
-        this.results = {}
+        this.results = null //{}
       }
       this.resultsLoading = false
     }
