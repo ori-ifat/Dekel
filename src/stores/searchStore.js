@@ -305,10 +305,12 @@ class Search {
       this.filtersError = null
       const tags = toJS(this.tags)
       let filters = []  //no drilldown - from tags only     
-      //add date filter always (start empty anyway)
-      //const filter = getDefaultFilter(tags.length == 0 && filters.length == 0)
-      const filter = getDefaultFilter(tags.length == 0)
-      filters = [filter]
+      //add date filter always (start empty anyway)      
+      //const filter = getDefaultFilter(tags.length == 0)
+      const dateFilters = filter(this.filters, filter => {
+        return filter.field == 'inputDate' || filter.field == 'presentationDate' || filter.field == 'resultDate'
+      })      
+      filters = dateFilters.length > 0 ? dateFilters : [getDefaultFilter(tags.length == 0)]
 
       const searchParams = {
         tags: this.serializedTags,

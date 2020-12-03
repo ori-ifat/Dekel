@@ -8,6 +8,7 @@ import Select from 'react-select'
 import ClassesFilter from 'common/components/ClassesFilter'
 import SavedSearches from './SavedSearches'
 import {observable, toJS} from 'mobx'
+import filter from 'lodash/filter'
 import forEach from 'lodash/forEach'
 import remove from 'lodash/remove'
 import {autocomplete} from 'common/services/apiService'
@@ -158,8 +159,18 @@ class SearchInput extends Component {
     const tags = JSON.stringify(this.selectedValues)
     searchStore.applySort(sort)
     searchStore.applyTags(tags, false)
-    searchStore.clearFilterLabels()
-    searchStore.applyFilters('[]')
+    const dateFilters = filter(searchStore.filters, filter => {
+      return filter.field == 'inputDate' || filter.field == 'presentationDate' || filter.field == 'resultDate'
+    })
+    //searchStore.clearFilterLabels()
+    if (dateFilters.length === 0){
+      searchStore.applyFilters('[]')
+    }
+    else {
+      searchStore.applyFilters(JSON.stringify(dateFilters))
+    }
+    searchStore.clearFilterLabels(dateFilters.length > 0)
+    console.log(toJS(dateFilters));
     recordStore.cleanChecked()
     //searchStore.clearResults()
     searchStore.fromRoute = true  //raise route flag - behave same as on route
